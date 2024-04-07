@@ -8,9 +8,9 @@
 import Foundation
 
 
-struct Strong: HTMLBlock {
+public struct Strong: HTMLBlock {
     
-    var content: String
+    public var content: String
     
     init(_ text: String) {
         self.content = "<strong> \(text) </strong>"

@@ -8,9 +8,9 @@
 import Foundation
 
 
-struct OrderedList: HTMLBlock {
+public struct OrderedList: HTMLBlock {
     
-    var content: String = ""
+    public var content: String = ""
     
     init(_ htmlBlock: [HTMLBlock] = []) {
         self.content = "<ol> \(generateSubCodeBlocks(htmlBlock: htmlBlock)) </ol>"

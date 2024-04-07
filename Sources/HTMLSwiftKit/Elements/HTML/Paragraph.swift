@@ -8,9 +8,9 @@
 import Foundation
 
 
-struct Paragraph: HTMLBlock {
+public struct Paragraph: HTMLBlock {
     
-    var content: String
+    public var content: String
     
     init(_ text: String) {
         self.content = "<p> \(text) </p>"

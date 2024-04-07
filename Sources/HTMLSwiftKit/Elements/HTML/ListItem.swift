@@ -8,9 +8,9 @@
 import Foundation
 
 
-struct ListItem: HTMLBlock {
+public struct ListItem: HTMLBlock {
     
-    var content: String
+    public var content: String
     
     init(_ text: String) {
         self.content = "<li> \(text) </li>"

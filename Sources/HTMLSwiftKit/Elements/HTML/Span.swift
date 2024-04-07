@@ -8,9 +8,9 @@
 import Foundation
 
 
-struct Span: HTMLBlock {
+public struct Span: HTMLBlock {
     
-    var content: String = ""
+    public var content: String = ""
     
     private init() { }
     

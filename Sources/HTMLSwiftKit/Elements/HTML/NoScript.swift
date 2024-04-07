@@ -8,9 +8,9 @@
 import Foundation
 
 
-struct NoScript: HTMLBlock {
+public struct NoScript: HTMLBlock {
     
-    var content: String
+    public var content: String
     
     init(code: String) {
         self.content = "<noscript> \(code) </noscript>"

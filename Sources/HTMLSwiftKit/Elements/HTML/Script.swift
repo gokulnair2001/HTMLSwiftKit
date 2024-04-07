@@ -8,9 +8,9 @@
 import Foundation
 
 
-struct Script: HTMLBlock {
+public struct Script: HTMLBlock {
     
-    var content: String
+    public var content: String
     
     init(code: String) {
         self.content = "<script> \(code) </script>"

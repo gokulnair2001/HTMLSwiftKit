@@ -8,9 +8,9 @@
 import Foundation
 
 
-struct Meta: HTMLBlock {
+public struct Meta: HTMLBlock {
     
-    var content: String = ""
+    public var content: String = ""
     
     private init() { }
     
