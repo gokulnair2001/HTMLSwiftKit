@@ -10,7 +10,7 @@ import Foundation
 
 public struct Padding: CSSModifier {
     
-    enum PaddingFrom: String {
+    public enum PaddingFrom: String {
         case top
         case right
         case left

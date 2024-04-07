@@ -10,7 +10,7 @@ import Foundation
 
 public struct TextAlignment: CSSModifier {
     
-    enum Alignment: String {
+    public enum Alignment: String {
         case left
         case right
         case center

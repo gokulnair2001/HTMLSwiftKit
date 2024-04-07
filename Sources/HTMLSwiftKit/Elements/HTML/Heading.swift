@@ -10,7 +10,7 @@ import Foundation
 
 public struct Heading: HTMLBlock {
     
-    enum HeaderType: String {
+    public enum HeaderType: String {
         case h1
         case h2
         case h3

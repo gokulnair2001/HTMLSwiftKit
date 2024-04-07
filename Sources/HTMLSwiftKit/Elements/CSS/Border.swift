@@ -9,7 +9,7 @@ import Foundation
 
 public struct Border: CSSModifier {
     
-    enum BorderType: String {
+    public enum BorderType: String {
         case none
         case hidden
         case dotted

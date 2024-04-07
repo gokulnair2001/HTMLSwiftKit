@@ -10,7 +10,7 @@ import Foundation
 
 public struct Dialogue: HTMLBlock {
     
-    enum State: String {
+    public enum State: String {
         case open = "open"
         case close = "close"
     }

@@ -10,7 +10,7 @@ import Foundation
 
 public struct FontWeight: CSSModifier {
     
-    enum Weight {
+    public enum Weight {
         case normal
         case bold
         case bolder

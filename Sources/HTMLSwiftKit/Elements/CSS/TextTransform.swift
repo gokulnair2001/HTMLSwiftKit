@@ -10,7 +10,7 @@ import Foundation
 
 public struct TextTransform: CSSModifier {
     
-    enum Transform: String {
+    public enum Transform: String {
         case none
         case uppercase
         case lowercase

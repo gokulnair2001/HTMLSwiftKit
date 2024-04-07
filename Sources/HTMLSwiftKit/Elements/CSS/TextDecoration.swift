@@ -10,7 +10,7 @@ import Foundation
 
 public struct TextDecoration: CSSModifier {
     
-    enum Decoration: String {
+    public enum Decoration: String {
         case none
         case underline
         case overLine = "overline"
@@ -18,7 +18,7 @@ public struct TextDecoration: CSSModifier {
         case blink = "blink"
     }
     
-    enum DecorationStyle: String {
+    public enum DecorationStyle: String {
         case solid
         case double
         case dotted
