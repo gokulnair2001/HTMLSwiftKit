@@ -17,7 +17,7 @@ public struct Dialogue: HTMLBlock {
     
     public var content: String
     
-    init(_ state: State = .open, _ text: String) {
+    public init(_ state: State = .open, _ text: String) {
         self.content = "<dialog \(state.rawValue)> \(text) </dialog>"
     }
 }

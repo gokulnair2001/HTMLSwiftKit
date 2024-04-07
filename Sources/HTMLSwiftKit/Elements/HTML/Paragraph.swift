@@ -16,7 +16,7 @@ public struct Paragraph: HTMLBlock {
         self.content = "<p> \(text) </p>"
     }
     
-    init(_ htmlBlock: [HTMLBlock] = []) {
+    public init(_ htmlBlock: [HTMLBlock] = []) {
         self.init("")
         self.content = generateSubCodeBlocks(htmlBlock: htmlBlock)
     }

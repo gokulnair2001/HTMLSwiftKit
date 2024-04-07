@@ -12,7 +12,7 @@ public struct Section: HTMLBlock {
     
     public var content: String = ""
     
-    init(_ htmlBlock: [HTMLBlock] = []) {
+    public init(_ htmlBlock: [HTMLBlock] = []) {
         self.content = "<section> \(generateSubCodeBlocks(htmlBlock: htmlBlock)) </section>"
     }
 

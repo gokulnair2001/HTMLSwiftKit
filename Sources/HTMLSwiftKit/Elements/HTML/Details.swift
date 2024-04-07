@@ -13,7 +13,7 @@ public struct Details: HTMLBlock {
     
     public var content: String = ""
     
-    init(_ htmlBlock: [HTMLBlock] = []) {
+    public init(_ htmlBlock: [HTMLBlock] = []) {
         self.content = "<details> \(generateSubCodeBlocks(htmlBlock: htmlBlock)) </details>"
     }
     

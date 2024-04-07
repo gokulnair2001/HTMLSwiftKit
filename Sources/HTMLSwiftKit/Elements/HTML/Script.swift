@@ -12,7 +12,7 @@ public struct Script: HTMLBlock {
     
     public var content: String
     
-    init(code: String) {
+    public init(code: String) {
         self.content = "<script> \(code) </script>"
     }
 }

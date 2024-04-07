@@ -12,7 +12,7 @@ public struct Hyperlink: HTMLBlock {
     
     public var content: String
     
-    init(href: String, _ text: String) {
+    public init(href: String, _ text: String) {
         self.content = "<a href='\(href)'>\(text)</a>"
     }
 }

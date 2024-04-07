@@ -12,7 +12,7 @@ public struct NoScript: HTMLBlock {
     
     public var content: String
     
-    init(code: String) {
+    public init(code: String) {
         self.content = "<noscript> \(code) </noscript>"
     }
 }

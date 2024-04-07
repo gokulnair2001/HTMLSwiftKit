@@ -14,7 +14,7 @@ public struct Meta: HTMLBlock {
     
     private init() { }
     
-    init(charset: String) {
+    public init(charset: String) {
         self.init()
         self.content = "<meta charset='\(charset)'>"
     }

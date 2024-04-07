@@ -12,7 +12,7 @@ public struct OrderedList: HTMLBlock {
     
     public var content: String = ""
     
-    init(_ htmlBlock: [HTMLBlock] = []) {
+    public init(_ htmlBlock: [HTMLBlock] = []) {
         self.content = "<ol> \(generateSubCodeBlocks(htmlBlock: htmlBlock)) </ol>"
     }
     

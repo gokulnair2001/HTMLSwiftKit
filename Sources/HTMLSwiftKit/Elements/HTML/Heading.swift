@@ -21,11 +21,11 @@ public struct Heading: HTMLBlock {
     
     public var content: String = ""
     
-    init(_ type: HeaderType, _ text: String) {
+    public init(_ type: HeaderType, _ text: String) {
         self.content = "<\(type.rawValue)>\(text)</\(type.rawValue)>"
     }
     
-    init(_ text: String) {
+    public init(_ text: String) {
         self.init(.h1, text)
     }
 }

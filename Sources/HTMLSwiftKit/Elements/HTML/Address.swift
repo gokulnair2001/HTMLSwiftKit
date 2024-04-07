@@ -12,7 +12,7 @@ public struct Address: HTMLBlock {
     
     public var content: String = ""
     
-    init(mailTo: String, _ text: String) {
+    public init(mailTo: String, _ text: String) {
         self.content = "<a href='mailto:\(mailTo)'>\(text)</a>"
     }
 }

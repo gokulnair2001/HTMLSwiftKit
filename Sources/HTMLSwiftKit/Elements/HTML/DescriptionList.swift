@@ -12,7 +12,7 @@ public struct DescriptionList: HTMLBlock {
     
     public var content: String = ""
     
-    init(_ htmlBlock: [HTMLBlock] = []) {
+    public init(_ htmlBlock: [HTMLBlock] = []) {
         self.content = "<dl> \(generateSubCodeBlocks(htmlBlock: htmlBlock)) </dl>"
     }
     

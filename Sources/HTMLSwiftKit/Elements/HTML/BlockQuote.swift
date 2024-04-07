@@ -12,7 +12,7 @@ public struct BlockQuote: HTMLBlock {
     
     public var content: String
     
-    init(cite: String, section: String) {
+    public init(cite: String, section: String) {
         self.content = "<blockquote cite='\(cite)'> \(section) </blockquote>"
     }
 }

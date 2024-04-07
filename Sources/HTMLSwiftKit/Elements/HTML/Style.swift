@@ -18,12 +18,12 @@ public struct Style: HTMLBlock {
     
     private init() { }
     
-    init(_ cssBlock: [CSSBlock]) {
+    public init(_ cssBlock: [CSSBlock]) {
         self.init()
         self.cssCode = generateCSSCodeBlock(cssBlock: cssBlock)
     }
     
-    init(_ cssBlock: CSSBlock) {
+    public init(_ cssBlock: CSSBlock) {
         self.init()
         self.cssCode = cssBlock.generateSubCodeBlocks()
     }
