@@ -12,7 +12,7 @@ public struct FontFamily: CSSModifier {
     
     public var content: String
     
-    init(_ family: String) {
+    public init(_ family: String) {
         self.content = "font-family: \(family);"
     }
     

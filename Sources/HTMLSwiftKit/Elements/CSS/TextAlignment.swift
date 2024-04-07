@@ -21,7 +21,7 @@ public struct TextAlignment: CSSModifier {
     
     public var content: String
     
-    init(_ alignment: Alignment) {
+    public init(_ alignment: Alignment) {
         self.content = "text-align: \(alignment.rawValue);"
     }
     

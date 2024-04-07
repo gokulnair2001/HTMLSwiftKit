@@ -11,7 +11,7 @@ public struct BackgroundColor: CSSModifier {
     
     public var content: String
     
-    init(color: String) {
+    public init(color: String) {
         self.content = "background-color: \(color);"
     }
 }

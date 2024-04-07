@@ -28,18 +28,18 @@ public struct TextDecoration: CSSModifier {
     
     public var content: String
     
-    init(_ decoration: Decoration...) {
+    public init(_ decoration: Decoration...) {
         let computedDecorations = decoration.reduce("") { partialResult, decoration in
             return partialResult + " \(decoration.rawValue)"
         }
         self.content = "text-decoration: \(computedDecorations);"
     }
     
-    init(color: String) {
+    public init(color: String) {
         self.content = "text-decoration-color: \(color);"
     }
     
-    init(style: DecorationStyle) {
+    public init(style: DecorationStyle) {
         self.content = "text-decoration-style: \(style.rawValue);"
     }
 }

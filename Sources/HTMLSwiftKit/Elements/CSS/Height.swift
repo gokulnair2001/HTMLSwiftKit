@@ -12,7 +12,7 @@ public struct Height: CSSModifier {
     
     public var content: String
     
-    init(_ size: Int) {
+    public init(_ size: Int) {
         self.content = "height: \(size)px;"
     }
     

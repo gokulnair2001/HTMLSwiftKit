@@ -24,7 +24,7 @@ public struct Border: CSSModifier {
     
     public var content: String
     
-    init(_ width: Int, border: BorderType = .none, color: String? = nil) {
+    public init(_ width: Int, border: BorderType = .none, color: String? = nil) {
         self.content = "border: \(width)px \(border.rawValue) \(color ?? "");"
     }
 }

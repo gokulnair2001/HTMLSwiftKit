@@ -32,7 +32,7 @@ public struct FontWeight: CSSModifier {
     
     public var content: String
     
-    init(_ weight: Weight) {
+    public init(_ weight: Weight) {
         self.content = "font-weight: \(weight.value);"
     }
     

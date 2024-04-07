@@ -12,7 +12,7 @@ public struct Margins: CSSModifier {
     
     public var content: String
     
-    init(_ size: Int) {
+    public init(_ size: Int) {
         self.content = "margin: \(size)px;"
     }
     

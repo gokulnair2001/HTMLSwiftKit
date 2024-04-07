@@ -21,7 +21,7 @@ public struct TextTransform: CSSModifier {
     
     public var content: String
     
-    init(_ type: Transform) {
+    public init(_ type: Transform) {
         self.content = "text-transform: \(type.rawValue);"
     }
 }

@@ -21,12 +21,12 @@ public struct Padding: CSSModifier {
     
     private init() { }
     
-    init(_ size: Int) {
+    public init(_ size: Int) {
         self.init()
         self.content = "padding: \(size)px;"
     }
     
-    init(_ from: PaddingFrom, _ size: Int) {
+    public init(_ from: PaddingFrom, _ size: Int) {
         self.init()
         self.content = "padding-\(from.rawValue): \(size)px;"
     }

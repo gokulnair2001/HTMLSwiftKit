@@ -12,7 +12,7 @@ public struct Color: CSSModifier {
     
     public var content: String
     
-    init(_ color: String) {
+    public init(_ color: String) {
         self.content = "color: \(color);"
     }
     
