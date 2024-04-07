@@ -9,7 +9,7 @@ import Foundation
 
 
 @resultBuilder
-struct ArrayBuilder<T> {
+public struct ArrayBuilder<T> {
     
     public static func buildBlock(_ component: [T]...) -> [T] {
         return component.flatMap({ $0 })
