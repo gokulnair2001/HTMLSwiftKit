@@ -1,5 +1,5 @@
 //
-//  ArrayBuilder.swift
+//  BlockBuilder.swift
 //  HTMLSwiftKitTest
 //
 //  Created by Gokul Nair on 29/03/24.
@@ -9,7 +9,7 @@ import Foundation
 
 
 @resultBuilder
-public struct ArrayBuilder<T> {
+public struct BlockBuilder<T> {
     
     public static func buildBlock(_ component: [T]...) -> [T] {
         return component.flatMap({ $0 })

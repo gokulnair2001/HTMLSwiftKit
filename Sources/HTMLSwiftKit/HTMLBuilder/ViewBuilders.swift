@@ -10,15 +10,15 @@ import SwiftUI
 
 public extension HTMLWrapper {
     
-    func HTMLView(@ArrayBuilder<HTMLBlock> _ block: () -> [HTMLBlock]) -> [HTMLBlock] {
+    func HTMLView(@BlockBuilder<HTMLBlock> _ block: () -> [HTMLBlock]) -> [HTMLBlock] {
         return block()
     }
     
-    func CSSModifierStack(@ArrayBuilder<CSSModifier> _ block: () -> [CSSModifier]) -> [CSSModifier] {
+    func CSSModifierStack(@BlockBuilder<CSSModifier> _ block: () -> [CSSModifier]) -> [CSSModifier] {
         return block()
     }
     
-    func CSSBlockStack(@ArrayBuilder<CSSBlock> _ block: () -> [CSSBlock]) -> [CSSBlock] {
+    func CSSBlockStack(@BlockBuilder<CSSBlock> _ block: () -> [CSSBlock]) -> [CSSBlock] {
         return block()
     }
 }

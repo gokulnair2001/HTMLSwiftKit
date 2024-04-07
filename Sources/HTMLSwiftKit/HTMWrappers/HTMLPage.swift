@@ -12,12 +12,8 @@ public protocol HTMLPage: HTMLWrapper {
     
     var name: String { get }
     
-    var baseUrl: URL { get }
-    
-    var htmlContent : [HTMLBlock] { get }
-    
-    var crawler: CrawlerConfiguration { get }
-    
+    @BlockBuilder<HTMLBlock> var htmlContent: [any HTMLBlock] { get }
+
     func generateCodeBlock() -> String
 }
 
@@ -25,10 +21,6 @@ public extension HTMLPage {
     
     var name: String {
         return String(describing: type(of: self))
-    }
-    
-    var crawler: CrawlerConfiguration {
-        return DefaultCrawlerConfiguration()
     }
     
     func generateCodeBlock() -> String {

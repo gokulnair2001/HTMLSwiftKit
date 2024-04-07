@@ -14,5 +14,11 @@ enum PageGeneratorError: LocalizedError {
     
     case failedToCreateBuildDirectory(URL)
     
+    case failedToCreateAssetDirectory(URL)
+    
+    case failedToCreateSiteMapFile(URL)
+    
+    case failedToCreateCrawlerFile(URL)
+    
     case failedToGeneratePage
 }
