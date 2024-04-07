@@ -8,6 +8,11 @@
 import Foundation
 
 
+typealias HtmlBlockBuilder = BlockBuilder<HTMLBlock>
+typealias CSSBlockBuilder = BlockBuilder<CSSBlock>
+typealias CSSModifierBuilder = BlockBuilder<CSSModifier>
+
+
 @resultBuilder
 public struct BlockBuilder<T> {
     

@@ -18,7 +18,7 @@ public protocol CSSBlock {
     
     var cssType: CSSType { get }
     
-    @BlockBuilder<CSSModifier> var content: [any CSSModifier] { get }
+    @CSSModifierBuilder var content: [any CSSModifier] { get }
     
     func generateSubCodeBlocks() -> String
     

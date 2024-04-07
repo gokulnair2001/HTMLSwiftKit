@@ -10,7 +10,7 @@ import Foundation
 
 struct CrawlerGenerator {
     
-    var site: any WebPage
+    var site: any WebSite
 
     func generateCrawlers() -> String {
         

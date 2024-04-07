@@ -12,8 +12,11 @@ public struct UnorderedList: HTMLBlock {
     
     public var content: String = ""
     
-    public init(_ htmlBlock: [HTMLBlock] = []) {
-        self.content = "<ul> \(generateSubCodeBlocks(htmlBlock: htmlBlock)) </ul>"
+    public init() {
+        self.init({  })
     }
     
+    public init(@HtmlBlockBuilder _ htmlBlock: (() -> [HTMLBlock])) {
+        self.content = "<ul> \(generateSubCodeBlocks(htmlBlock: htmlBlock())) </ul>"
+    }
 }

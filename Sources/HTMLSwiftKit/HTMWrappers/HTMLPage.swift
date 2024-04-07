@@ -12,7 +12,7 @@ public protocol HTMLPage {
     
     var name: String { get }
     
-    @BlockBuilder<HTMLBlock> var htmlContent: [any HTMLBlock] { get }
+    @HtmlBlockBuilder var htmlContent: [any HTMLBlock] { get }
 
     func generateCodeBlock() -> String
 }

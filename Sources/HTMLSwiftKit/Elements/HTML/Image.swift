@@ -19,9 +19,9 @@ public struct Image: HTMLBlock {
         self.content = generateImageBlockCode(source: src, alternative: alt, width: width, height: height, style: nil)
     }
     
-    public init(src: String, alt: String, style: [CSSModifier]) {
+    public init(src: String, alt: String, @CSSModifierBuilder _ style: () -> [CSSModifier]) {
         self.init()
-        self.content = generateImageBlockCode(source: src, alternative: alt, width: nil, height: nil, style: style)
+        self.content = generateImageBlockCode(source: src, alternative: alt, width: nil, height: nil, style: style())
     }
     
     func generateImageBlockCode(source: String, alternative: String?, width: Int?, height: Int?, style: [CSSModifier]?) -> String {

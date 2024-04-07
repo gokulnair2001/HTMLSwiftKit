@@ -14,14 +14,14 @@ public struct Divider: HTMLBlock {
     
     private init() { }
     
-    public init(_ htmlBlock: [HTMLBlock] = []) {
+    public init(@HtmlBlockBuilder _ htmlBlock: () -> [HTMLBlock]) {
         self.init()
-        self.content = "<div> \(generateSubCodeBlocks(htmlBlock: htmlBlock)) </div>"
+        self.content = "<div> \(generateSubCodeBlocks(htmlBlock: htmlBlock())) </div>"
     }
     
-    public init(classType: String, _ htmlBlock: [HTMLBlock] = []) {
+    public init(classType: String, @HtmlBlockBuilder _ htmlBlock: () -> [HTMLBlock]) {
         self.init()
         let className = classType.isBlank() ? "" : " class='\(classType)'"
-        self.content = "<div\(className)> \(generateSubCodeBlocks(htmlBlock: htmlBlock)) </div>"
+        self.content = "<div\(className)> \(generateSubCodeBlocks(htmlBlock: htmlBlock())) </div>"
     }
 }

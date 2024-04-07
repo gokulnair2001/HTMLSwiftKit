@@ -12,8 +12,8 @@ public struct DescriptionList: HTMLBlock {
     
     public var content: String = ""
     
-    public init(_ htmlBlock: [HTMLBlock] = []) {
-        self.content = "<dl> \(generateSubCodeBlocks(htmlBlock: htmlBlock)) </dl>"
+    public init(@HtmlBlockBuilder _ htmlBlock: () -> [HTMLBlock]) {
+        self.content = "<dl> \(generateSubCodeBlocks(htmlBlock: htmlBlock())) </dl>"
     }
     
 }

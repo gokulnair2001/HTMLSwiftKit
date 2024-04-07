@@ -18,9 +18,9 @@ public struct Style: HTMLBlock {
     
     private init() { }
     
-    public init(_ cssBlock: [CSSBlock]) {
+    public init(@CSSBlockBuilder _ cssBlock: () -> [CSSBlock]) {
         self.init()
-        self.cssCode = generateCSSCodeBlock(cssBlock: cssBlock)
+        self.cssCode = generateCSSCodeBlock(cssBlock: cssBlock())
     }
     
     public init(_ cssBlock: CSSBlock) {

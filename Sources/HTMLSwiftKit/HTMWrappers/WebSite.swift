@@ -1,5 +1,5 @@
 //
-//  WebPage.swift
+//  WebSite.swift
 //
 //
 //  Created by Gokul Nair on 07/04/24.
@@ -8,7 +8,7 @@
 import Foundation
 
 
-public protocol WebPage {
+public protocol WebSite {
     
     var name: String { get }
     
@@ -23,7 +23,7 @@ public protocol WebPage {
     var crawlerConfiguration: CrawlerConfiguration { get }
 }
 
-public extension WebPage {
+public extension WebSite {
     
     var name: String {
         return String(describing: type(of: self))

@@ -16,8 +16,8 @@ public struct Body: HTMLBlock {
         return "<body>\(htmlCode)</body>"
     }
     
-    public init(_ htmlBlock: [HTMLBlock] = []) {
-        self.htmlCode = generateSubCodeBlocks(htmlBlock: htmlBlock)
+    public init(@HtmlBlockBuilder _ htmlBlock: () -> [HTMLBlock]) {
+        self.htmlCode = generateSubCodeBlocks(htmlBlock: htmlBlock())
     }
 
 }

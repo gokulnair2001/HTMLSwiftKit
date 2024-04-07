@@ -14,9 +14,9 @@ public struct Span: HTMLBlock {
     
     private init() { }
     
-    public init(style: [CSSModifier], text: String) {
+    public init(@CSSModifierBuilder _ style: () -> [CSSModifier], text: String) {
         self.init()
-        self.content = "<span style='\(generateCSSInlineCode(cssModifiers: style))'>\(text)</span>"
+        self.content = "<span style='\(generateCSSInlineCode(cssModifiers: style()))'>\(text)</span>"
     }
     
     public init(style: CSSModifier, text: String) {

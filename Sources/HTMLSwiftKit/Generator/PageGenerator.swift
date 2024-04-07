@@ -16,7 +16,7 @@ import Foundation
 
 public class PageGenerator {
     
-    var site: WebPage
+    var site: WebSite
     
     var rootDirectory: URL
     
@@ -28,7 +28,7 @@ public class PageGenerator {
     
     private let fileManager = FileManager.default
     
-    init(site: WebPage, rootURL: URL, buildDirectoryPath: String = "Build") {
+    init(site: WebSite, rootURL: URL, buildDirectoryPath: String = "Build") {
         self.site = site
         self.rootDirectory = rootURL
         
