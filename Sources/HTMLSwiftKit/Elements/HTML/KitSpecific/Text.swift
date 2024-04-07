@@ -11,9 +11,9 @@ import Foundation
 /// A new tag introduced in HTMLSwiftKit
 /// Text tag is used while interpolating texts
 
-struct Text: HTMLBlock {
+public struct Text: HTMLBlock {
     
-    var content: String
+    public var content: String
     
     init(_ text: String) {
         self.content = text

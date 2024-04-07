@@ -8,9 +8,9 @@
 import Foundation
 
 
-struct Divider: HTMLBlock {
+public struct Divider: HTMLBlock {
     
-    var content: String = ""
+    public var content: String = ""
     
     private init() { }
     

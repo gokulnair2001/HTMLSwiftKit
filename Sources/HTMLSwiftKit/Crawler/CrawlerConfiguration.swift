@@ -8,7 +8,7 @@
 import Foundation
 
 
-protocol CrawlerConfiguration {
+public protocol CrawlerConfiguration {
     
     var disallowRules: [CrawlerDisallowRule] { get }
     

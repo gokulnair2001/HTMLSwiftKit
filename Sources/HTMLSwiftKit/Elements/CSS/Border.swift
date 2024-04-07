@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Border: CSSModifier {
+public struct Border: CSSModifier {
     
     enum BorderType: String {
         case none
@@ -22,7 +22,7 @@ struct Border: CSSModifier {
         case outset
     }
     
-    var content: String
+    public var content: String
     
     init(_ width: Int, border: BorderType = .none, color: String? = nil) {
         self.content = "border: \(width)px \(border.rawValue) \(color ?? "");"

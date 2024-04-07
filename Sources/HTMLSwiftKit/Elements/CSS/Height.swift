@@ -8,9 +8,9 @@
 import Foundation
 
 
-struct Height: CSSModifier {
+public struct Height: CSSModifier {
     
-    var content: String
+    public var content: String
     
     init(_ size: Int) {
         self.content = "height: \(size)px;"

@@ -8,9 +8,9 @@
 import Foundation
 
 
-struct Footer: HTMLBlock {
+public struct Footer: HTMLBlock {
     
-    var content: String = ""
+    public var content: String = ""
     
     init(_ htmlBlock: [HTMLBlock] = []) {
         self.content = "<footer>\(generateSubCodeBlocks(htmlBlock: htmlBlock))</footer>"

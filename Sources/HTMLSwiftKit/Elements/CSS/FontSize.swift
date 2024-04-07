@@ -8,9 +8,9 @@
 import Foundation
 
 
-struct FontSize: CSSModifier {
+public struct FontSize: CSSModifier {
     
-    var content: String
+    public var content: String
     
     init(_ size: Int) {
         self.content = "font-size: \(size)px;"

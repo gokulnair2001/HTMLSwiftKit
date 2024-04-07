@@ -8,7 +8,7 @@
 import Foundation
 
 
-struct CrawlerDisallowRule {
+public struct CrawlerDisallowRule {
     
     var agent: String
     var paths: [String]

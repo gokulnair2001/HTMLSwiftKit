@@ -8,14 +8,14 @@
 import Foundation
 
 
-struct Dialogue: HTMLBlock {
+public struct Dialogue: HTMLBlock {
     
     enum State: String {
         case open = "open"
         case close = "close"
     }
     
-    var content: String
+    public var content: String
     
     init(_ state: State = .open, _ text: String) {
         self.content = "<dialog \(state.rawValue)> \(text) </dialog>"

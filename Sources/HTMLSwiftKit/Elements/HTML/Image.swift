@@ -8,18 +8,18 @@
 import Foundation
 
 
-struct Image: HTMLBlock {
+public struct Image: HTMLBlock {
     
-    var content: String = ""
+    public var content: String = ""
     
     private init() {}
     
-    init(src: String, alt: String, _ width: Int? = nil, _ height: Int? = nil) {
+    public init(src: String, alt: String, _ width: Int? = nil, _ height: Int? = nil) {
         self.init()
         self.content = generateImageBlockCode(source: src, alternative: alt, width: width, height: height, style: nil)
     }
     
-    init(src: String, alt: String, style: [CSSModifier]) {
+    public init(src: String, alt: String, style: [CSSModifier]) {
         self.init()
         self.content = generateImageBlockCode(source: src, alternative: alt, width: nil, height: nil, style: style)
     }

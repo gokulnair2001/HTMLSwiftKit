@@ -8,7 +8,7 @@
 import Foundation
 
 
-struct TextTransform: CSSModifier {
+public struct TextTransform: CSSModifier {
     
     enum Transform: String {
         case none
@@ -19,7 +19,7 @@ struct TextTransform: CSSModifier {
         case inherit
     }
     
-    var content: String
+    public var content: String
     
     init(_ type: Transform) {
         self.content = "text-transform: \(type.rawValue);"

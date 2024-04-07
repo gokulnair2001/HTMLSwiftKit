@@ -8,9 +8,9 @@
 import Foundation
 
 
-struct Margins: CSSModifier {
+public struct Margins: CSSModifier {
     
-    var content: String
+    public var content: String
     
     init(_ size: Int) {
         self.content = "margin: \(size)px;"

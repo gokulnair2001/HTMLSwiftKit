@@ -8,7 +8,7 @@
 import SwiftUI
 
 
-extension HTMLWrapper {
+public extension HTMLWrapper {
     
     func HTMLView(@ArrayBuilder<HTMLBlock> _ block: () -> [HTMLBlock]) -> [HTMLBlock] {
         return block()

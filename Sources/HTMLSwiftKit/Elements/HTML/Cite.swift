@@ -8,9 +8,9 @@
 import Foundation
 
 
-struct Cite: HTMLBlock {
+public struct Cite: HTMLBlock {
     
-    var content: String
+    public var content: String
     
     init(_ text: String) {
         self.content = "<cite> \(text) </cite>"

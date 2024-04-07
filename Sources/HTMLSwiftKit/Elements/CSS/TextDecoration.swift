@@ -8,7 +8,7 @@
 import Foundation
 
 
-struct TextDecoration: CSSModifier {
+public struct TextDecoration: CSSModifier {
     
     enum Decoration: String {
         case none
@@ -26,7 +26,7 @@ struct TextDecoration: CSSModifier {
         case wavy
     }
     
-    var content: String
+    public var content: String
     
     init(_ decoration: Decoration...) {
         let computedDecorations = decoration.reduce("") { partialResult, decoration in

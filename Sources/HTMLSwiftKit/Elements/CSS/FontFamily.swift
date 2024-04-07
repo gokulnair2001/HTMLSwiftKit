@@ -8,9 +8,9 @@
 import Foundation
 
 
-struct FontFamily: CSSModifier {
+public struct FontFamily: CSSModifier {
     
-    var content: String
+    public var content: String
     
     init(_ family: String) {
         self.content = "font-family: \(family);"

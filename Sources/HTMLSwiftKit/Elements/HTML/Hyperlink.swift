@@ -8,9 +8,9 @@
 import Foundation
 
 
-struct Hyperlink: HTMLBlock {
+public struct Hyperlink: HTMLBlock {
     
-    var content: String
+    public var content: String
     
     init(href: String, _ text: String) {
         self.content = "<a href='\(href)'>\(text)</a>"

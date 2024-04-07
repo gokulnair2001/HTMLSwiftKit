@@ -8,9 +8,9 @@
 import Foundation
 
 
-struct Break: HTMLBlock {
+public struct Break: HTMLBlock {
     
-    var content: String {
+    public var content: String {
         return "<br>"
     }
 }

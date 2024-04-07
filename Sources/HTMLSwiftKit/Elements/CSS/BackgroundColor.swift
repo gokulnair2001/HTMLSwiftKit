@@ -7,9 +7,9 @@
 
 import Foundation
 
-struct BackgroundColor: CSSModifier {
+public struct BackgroundColor: CSSModifier {
     
-    var content: String
+    public var content: String
     
     init(color: String) {
         self.content = "background-color: \(color);"

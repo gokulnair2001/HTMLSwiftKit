@@ -8,7 +8,7 @@
 import Foundation
 
 
-struct Padding: CSSModifier {
+public struct Padding: CSSModifier {
     
     enum PaddingFrom: String {
         case top
@@ -17,7 +17,7 @@ struct Padding: CSSModifier {
         case bottom
     }
     
-    var content: String = ""
+    public var content: String = ""
     
     private init() { }
     

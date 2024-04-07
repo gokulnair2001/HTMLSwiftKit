@@ -8,9 +8,9 @@
 import Foundation
 
 
-struct Width: CSSModifier {
+public struct Width: CSSModifier {
     
-    var content: String
+    public var content: String
     
     init(_ size: Int) {
         self.content = "width: \(size)px;"

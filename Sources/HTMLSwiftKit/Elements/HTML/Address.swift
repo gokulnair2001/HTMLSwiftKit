@@ -8,9 +8,9 @@
 import Foundation
 
 
-struct Address: HTMLBlock {
+public struct Address: HTMLBlock {
     
-    var content: String = ""
+    public var content: String = ""
     
     init(mailTo: String, _ text: String) {
         self.content = "<a href='mailto:\(mailTo)'>\(text)</a>"

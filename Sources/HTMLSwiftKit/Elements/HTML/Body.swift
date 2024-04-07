@@ -8,11 +8,11 @@
 import Foundation
 
 
-struct Body: HTMLBlock {
+public struct Body: HTMLBlock {
     
     private var htmlCode: String = ""
     
-    var content: String {
+    public var content: String {
         return "<body>\(htmlCode)</body>"
     }
     

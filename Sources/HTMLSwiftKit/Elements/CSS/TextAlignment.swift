@@ -8,7 +8,7 @@
 import Foundation
 
 
-struct TextAlignment: CSSModifier {
+public struct TextAlignment: CSSModifier {
     
     enum Alignment: String {
         case left
@@ -19,7 +19,7 @@ struct TextAlignment: CSSModifier {
         case end
     }
     
-    var content: String
+    public var content: String
     
     init(_ alignment: Alignment) {
         self.content = "text-align: \(alignment.rawValue);"

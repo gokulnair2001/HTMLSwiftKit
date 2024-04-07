@@ -8,7 +8,7 @@
 import Foundation
 
 
-enum Crawler: String {
+public enum Crawler: String {
     
     case apple = "Applebot"
     case baidu = "baiduspider"

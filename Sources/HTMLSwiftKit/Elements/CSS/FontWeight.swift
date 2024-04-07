@@ -8,7 +8,7 @@
 import Foundation
 
 
-struct FontWeight: CSSModifier {
+public struct FontWeight: CSSModifier {
     
     enum Weight {
         case normal
@@ -30,7 +30,7 @@ struct FontWeight: CSSModifier {
         }
     }
     
-    var content: String
+    public var content: String
     
     init(_ weight: Weight) {
         self.content = "font-weight: \(weight.value);"

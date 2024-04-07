@@ -21,20 +21,20 @@ public protocol HTMLBlock: HTMLWrapper {
 
 extension HTMLBlock {
     
-    func generateSubCodeBlocks(htmlBlock: [HTMLBlock]) -> String {
+    public func generateSubCodeBlocks(htmlBlock: [HTMLBlock]) -> String {
         
         return htmlBlock.reduce("") { partialResult, block in
             return partialResult + "\(block.content)"
         }
     }
     
-    func generateCSSCodeBlock(cssBlock: [CSSBlock]) -> String {
+    public func generateCSSCodeBlock(cssBlock: [CSSBlock]) -> String {
         return cssBlock.reduce("") { partialResult, block in
             return partialResult + "\n\n\(block.generateSubCodeBlocks())"
         }
     }
     
-    func generateCSSInlineCode(cssModifiers: [CSSModifier]) -> String {
+    public func generateCSSInlineCode(cssModifiers: [CSSModifier]) -> String {
         return cssModifiers.reduce("") { partialResult, block in
             return partialResult + "\(block.content)\n"
         }

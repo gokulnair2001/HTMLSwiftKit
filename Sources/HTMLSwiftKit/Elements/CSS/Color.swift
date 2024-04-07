@@ -8,9 +8,9 @@
 import Foundation
 
 
-struct Color: CSSModifier {
+public struct Color: CSSModifier {
     
-    var content: String
+    public var content: String
     
     init(_ color: String) {
         self.content = "color: \(color);"

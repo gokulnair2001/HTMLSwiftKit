@@ -8,7 +8,7 @@
 import Foundation
 
 
-struct Heading: HTMLBlock {
+public struct Heading: HTMLBlock {
     
     enum HeaderType: String {
         case h1
@@ -19,7 +19,7 @@ struct Heading: HTMLBlock {
         case h6
     }
     
-    var content: String = ""
+    public var content: String = ""
     
     init(_ type: HeaderType, _ text: String) {
         self.content = "<\(type.rawValue)>\(text)</\(type.rawValue)>"

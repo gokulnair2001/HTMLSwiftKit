@@ -8,9 +8,9 @@
 import Foundation
 
 
-struct Delete: HTMLBlock {
+public struct Delete: HTMLBlock {
     
-    var content: String
+    public var content: String
     
     init(_ text: String) {
         self.content = "<del> \(text) </del>"

@@ -8,9 +8,9 @@
 import Foundation
 
 
-struct HorizontalRule: HTMLBlock {
+public struct HorizontalRule: HTMLBlock {
     
-    var content: String {
+    public var content: String {
         return "<hr>"
     }
     

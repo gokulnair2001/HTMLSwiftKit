@@ -8,9 +8,9 @@
 import Foundation
 
 
-struct BlockQuote: HTMLBlock {
+public struct BlockQuote: HTMLBlock {
     
-    var content: String
+    public var content: String
     
     init(cite: String, section: String) {
         self.content = "<blockquote cite='\(cite)'> \(section) </blockquote>"

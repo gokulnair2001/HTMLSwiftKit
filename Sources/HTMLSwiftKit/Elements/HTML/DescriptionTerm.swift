@@ -8,9 +8,9 @@
 import Foundation
 
 
-struct DescriptionTerm: HTMLBlock {
+public struct DescriptionTerm: HTMLBlock {
     
-    var content: String
+    public var content: String
     
     init(_ text: String) {
         self.content = "<dt> \(text) </dt>"
