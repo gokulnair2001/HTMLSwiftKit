@@ -12,7 +12,7 @@ public enum CSSType {
     case custom
 }
 
-public protocol CSSBlock: HTMLWrapper {
+public protocol CSSBlock {
     
     var className: String { get }
     

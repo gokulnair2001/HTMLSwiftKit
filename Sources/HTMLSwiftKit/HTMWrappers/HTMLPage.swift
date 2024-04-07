@@ -8,7 +8,7 @@
 import SwiftUI
 
 
-public protocol HTMLPage: HTMLWrapper {
+public protocol HTMLPage {
     
     var name: String { get }
     
