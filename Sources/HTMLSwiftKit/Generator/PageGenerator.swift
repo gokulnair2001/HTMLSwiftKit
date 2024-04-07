@@ -30,8 +30,14 @@ public class PageGenerator {
         self.pages = pages
         self.rootDirectory = rootURL
         
-        buildDirectory = rootDirectory.appending(path: buildDirectoryPath)
-        assetsDirectory = rootDirectory.appending(path: "Assets")
+        // change it later
+        if #available(iOS 16.0, *) {
+            buildDirectory = rootDirectory.appending(path: buildDirectoryPath)
+            assetsDirectory = rootDirectory.appending(path: "Assets")
+        } else {
+            // Fallback on earlier versions
+        }
+        
     }
     
     private func generate() {
