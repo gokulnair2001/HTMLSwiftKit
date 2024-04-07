@@ -1,0 +1,19 @@
+//
+//  Footer.swift
+//  HTMLSwiftKitTest
+//
+//  Created by Gokul Nair on 02/04/24.
+//
+
+import Foundation
+
+
+struct Footer: HTMLBlock {
+    
+    var content: String = ""
+    
+    init(_ htmlBlock: [HTMLBlock] = []) {
+        self.content = "<footer>\(generateSubCodeBlocks(htmlBlock: htmlBlock))</footer>"
+    }
+    
+}
