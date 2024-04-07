@@ -10,7 +10,9 @@ import Foundation
 
 public struct Break: HTMLBlock {
     
-    public public var content: String {
+    public var content: String {
         return "<br>"
     }
+    
+    public init() { }
 }

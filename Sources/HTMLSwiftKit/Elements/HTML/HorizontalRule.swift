@@ -14,4 +14,5 @@ public struct HorizontalRule: HTMLBlock {
         return "<hr>"
     }
     
+    public init() { }
 }
