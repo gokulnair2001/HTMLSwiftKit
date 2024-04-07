@@ -1,20 +1,14 @@
 //
-//  PageGenerator.swift
+//  SiteGenerator.swift
 //  HTMLSwiftKitTest
 //
 //  Created by Gokul Nair on 04/04/24.
 //
 
 import Foundation
-/*
- - A generator class which will set a specific path in local machine and build and store all the files.
- 
- - The generator will get a specific path, if required using the same links tag will work
- 
- - Need to think through how to add local image support
- */
 
-public class PageGenerator {
+
+public class SiteGenerator {
     
     var site: WebSite
     
@@ -42,13 +36,6 @@ public class PageGenerator {
         try createAssetsFolder()
         try createCrawlerFolder()
     }
-    
-    /*
-     1. clear build file method
-     2. Create HTML Build file
-     3. Create Assets doc
-     4. generate siteMap
-     */
     
     private func clearBuildFolder() throws {
         

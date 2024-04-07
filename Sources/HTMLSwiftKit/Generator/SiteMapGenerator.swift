@@ -10,7 +10,7 @@ import Foundation
 
 struct SiteMapGenerator {
     
-    var context: PageGenerator
+    var context: SiteGenerator
 
     func generateSiteMap() -> String {
         
