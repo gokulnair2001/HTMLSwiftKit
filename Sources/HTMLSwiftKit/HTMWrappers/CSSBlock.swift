@@ -26,11 +26,11 @@ public protocol CSSBlock: HTMLWrapper {
 
 extension CSSBlock {
     
-    var className: String {
+    public var className: String {
         return String(describing: type(of: self))
     }
     
-    func generateSubCodeBlocks() -> String {
+    public func generateSubCodeBlocks() -> String {
         
         let code = content.reduce("") { partialResult, block in
             return partialResult + "\n\(block.content)"

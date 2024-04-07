@@ -23,15 +23,15 @@ public protocol HTMLPage: HTMLWrapper {
 
 extension HTMLPage {
     
-    var name: String {
+    public var name: String {
         return String(describing: type(of: self))
     }
     
-    var crawler: CrawlerConfiguration {
+    public var crawler: CrawlerConfiguration {
         return DefaultCrawlerConfiguration()
     }
     
-    func generateCodeBlock() -> String {
+    public func generateCodeBlock() -> String {
         
         let contentBlockCode = htmlContent.reduce("") { partialResult, block in
             return partialResult + "\(block.content)"
