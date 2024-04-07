@@ -24,20 +24,20 @@ public protocol CSSBlock: HTMLWrapper {
     
 }
 
-extension CSSBlock {
+public extension CSSBlock {
     
-    public var className: String {
+    var className: String {
         return String(describing: type(of: self))
     }
     
-    public func generateSubCodeBlocks() -> String {
+    func generateSubCodeBlocks() -> String {
         
         let code = content.reduce("") { partialResult, block in
             return partialResult + "\n\(block.content)"
         }
         
         switch cssType {
-        
+            
         case .source:
             return """
             \(className) { \(code)

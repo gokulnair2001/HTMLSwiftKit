@@ -21,17 +21,17 @@ public protocol HTMLPage: HTMLWrapper {
     func generateCodeBlock() -> String
 }
 
-extension HTMLPage {
+public extension HTMLPage {
     
-    public var name: String {
+    var name: String {
         return String(describing: type(of: self))
     }
     
-    public var crawler: CrawlerConfiguration {
+    var crawler: CrawlerConfiguration {
         return DefaultCrawlerConfiguration()
     }
     
-    public func generateCodeBlock() -> String {
+    func generateCodeBlock() -> String {
         
         let contentBlockCode = htmlContent.reduce("") { partialResult, block in
             return partialResult + "\(block.content)"
