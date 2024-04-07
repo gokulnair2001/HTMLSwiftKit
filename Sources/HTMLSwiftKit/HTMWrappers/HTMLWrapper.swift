@@ -9,6 +9,6 @@ import Foundation
 
 
 /// A generic wrapper type
-protocol HTMLWrapper {
+public protocol HTMLWrapper {
     
 }

@@ -8,9 +8,11 @@
 import SwiftUI
 
 
-protocol HTMLPage: HTMLWrapper {
+public protocol HTMLPage: HTMLWrapper {
     
     var name: String { get }
+    
+    var baseUrl: URL { get }
     
     var htmlContent : [HTMLBlock] { get }
     
@@ -44,6 +46,5 @@ extension HTMLPage {
         
         """
     }
-    
 }
 

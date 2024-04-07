@@ -6,3 +6,8 @@
 //
 
 import Foundation
+
+
+struct SiteMapData {
+    var path: String
+}

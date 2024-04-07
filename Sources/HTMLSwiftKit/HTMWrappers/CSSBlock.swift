@@ -7,12 +7,12 @@
 
 import Foundation
 
-enum CSSType {
+public enum CSSType {
     case source
     case custom
 }
 
-protocol CSSBlock: HTMLWrapper {
+public protocol CSSBlock: HTMLWrapper {
     
     var className: String { get }
     

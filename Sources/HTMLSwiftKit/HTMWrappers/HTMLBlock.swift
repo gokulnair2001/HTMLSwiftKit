@@ -8,7 +8,7 @@
 import Foundation
 
 
-protocol HTMLBlock: HTMLWrapper {
+public protocol HTMLBlock: HTMLWrapper {
     
     var content: String { get }
     

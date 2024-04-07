@@ -11,4 +11,8 @@ import Foundation
 enum PageGeneratorError: LocalizedError {
     
     case failedToClearBuildDirectory(URL)
+    
+    case failedToCreateBuildDirectory(URL)
+    
+    case failedToGeneratePage
 }

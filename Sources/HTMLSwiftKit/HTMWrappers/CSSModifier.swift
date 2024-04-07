@@ -8,7 +8,7 @@
 import Foundation
 
 
-protocol CSSModifier {
+public protocol CSSModifier {
     
     var content: String { get }
     
