@@ -10,7 +10,7 @@ import Foundation
 
 public class SiteGenerator {
     
-    private var site: WebSite
+    private(set) var site: WebSite
     
     private var rootDirectory: URL
     
@@ -85,7 +85,7 @@ public class SiteGenerator {
         
         do {
             try string.write(to: outputURL, atomically: true, encoding: .utf8)
-            self.addNewSiteMap(data: SiteMapData(url: URL(string: "\(site.baseUrl)/\(fileName)")!, priority: priority, changeFrequency: changeFreq))
+            self.addNewSiteMap(data: SiteMapData(path: fileName, priority: priority, changeFrequency: changeFreq))
             
         } catch {
             throw PageGeneratorError.failedToCreateBuildDirectory(outputURL)

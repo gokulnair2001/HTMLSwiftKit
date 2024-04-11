@@ -18,7 +18,7 @@ public enum ChangeFrequency: String {
 }
 
 struct SiteMapData {
-    var url: URL
+    var path: String
     var priority: Double
     var changeFrequency: ChangeFrequency = .Never
 }
