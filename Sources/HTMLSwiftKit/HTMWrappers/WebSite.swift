@@ -42,7 +42,7 @@ public extension WebSite {
         let generator = try SiteGenerator(site: self, rootURL: file, buildDirectoryPath: "Build")
         
         do {
-            try generator.gene
+            try generator.generate()
         }
         
     }
