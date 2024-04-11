@@ -35,6 +35,7 @@ public class SiteGenerator {
         try createHTMLFolder()
         try createAssetsFolder()
         try createCrawlerFolder()
+        try createSiteMapFolder()
     }
     
     private func clearBuildFolder() throws {
@@ -93,7 +94,7 @@ public class SiteGenerator {
     
     private func createAssetsFolder() throws {
         
-        guard fileManager.fileExists(atPath: assetsDirectory.path()) else {
+        guard !fileManager.fileExists(atPath: assetsDirectory.path()) else {
             return
         }
         
