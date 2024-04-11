@@ -22,7 +22,7 @@ public class SiteGenerator {
     
     private let fileManager = FileManager.default
     
-    init(site: WebSite, rootURL: URL, buildDirectoryPath: String = "Build") {
+    public init(site: WebSite, rootURL: URL, buildDirectoryPath: String = "Build") {
         self.site = site
         self.rootDirectory = rootURL
         
