@@ -25,7 +25,7 @@ public class SiteGenerator {
     public init(site: WebSite, buildDirectoryPath: String = "Build") throws {
         self.site = site
         self.rootDirectory = fileManager.urls(for: .documentDirectory, in: .userDomainMask).first!
-        
+        print("✅:\(rootDirectory.absoluteString)")
         buildDirectory = rootDirectory.appending(path: buildDirectoryPath)
         assetsDirectory = rootDirectory.appending(path: "Assets")
     }
