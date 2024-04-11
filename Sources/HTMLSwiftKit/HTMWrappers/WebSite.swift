@@ -22,7 +22,7 @@ public protocol WebSite {
     
     var crawlerConfiguration: CrawlerConfiguration { get }
     
-    func publish(from file: StaticString, buildDirectoryPath: String) throws
+    func publish(buildDirectoryPath: String) throws
 }
 
 public extension WebSite {
