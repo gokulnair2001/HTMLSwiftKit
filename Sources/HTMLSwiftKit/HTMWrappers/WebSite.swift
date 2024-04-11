@@ -21,6 +21,8 @@ public protocol WebSite {
     @BlockBuilder<HTMLPage> var pages: [any HTMLPage] { get }
     
     var crawlerConfiguration: CrawlerConfiguration { get }
+    
+    func publish(from file: StaticString, buildDirectoryPath: String) throws
 }
 
 public extension WebSite {
@@ -29,8 +31,19 @@ public extension WebSite {
         return String(describing: type(of: self))
     }
     
+    var description: String? { nil }
+    
     var crawlerConfiguration: CrawlerConfiguration {
         return DefaultCrawlerConfiguration()
     }
     
+    func publish(from file: StaticString, buildDirectoryPath: String) throws {
+        
+        let generator = try SiteGenerator(site: self, rootURL: file, buildDirectoryPath: "Build")
+        
+        do {
+            try generator.gene
+        }
+        
+    }
 }

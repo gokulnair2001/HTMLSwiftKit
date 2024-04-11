@@ -22,15 +22,15 @@ public class SiteGenerator {
     
     private let fileManager = FileManager.default
     
-    public init(site: WebSite, rootURL: URL, buildDirectoryPath: String = "Build") {
+    public init(site: WebSite, rootURL: StaticString, buildDirectoryPath: String = "Build") throws {
         self.site = site
-        self.rootDirectory = rootURL
+        self.rootDirectory = try URL.packageDirectory(from: rootURL)
         
         buildDirectory = rootDirectory.appending(path: buildDirectoryPath)
         assetsDirectory = rootDirectory.appending(path: "Assets")
     }
     
-    private func generate() throws {
+    public func generate() throws {
         try clearBuildFolder()
         try createHTMLFolder()
         try createAssetsFolder()

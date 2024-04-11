@@ -21,4 +21,6 @@ enum PageGeneratorError: LocalizedError {
     case failedToCreateCrawlerFile(URL)
     
     case failedToGeneratePage
+    
+    case packageDirectoryMissing
 }
