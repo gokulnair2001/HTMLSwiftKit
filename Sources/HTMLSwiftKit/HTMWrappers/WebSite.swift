@@ -37,9 +37,9 @@ public extension WebSite {
         return DefaultCrawlerConfiguration()
     }
     
-    func publish(from file: StaticString = #file, buildDirectoryPath: String = "Build") throws {
+    func publish(buildDirectoryPath: String = "Build") throws {
         
-        let generator = try SiteGenerator(site: self, rootURL: file, buildDirectoryPath: buildDirectoryPath)
+        let generator = try SiteGenerator(site: self, buildDirectoryPath: buildDirectoryPath)
         
         do {
             try generator.generate()

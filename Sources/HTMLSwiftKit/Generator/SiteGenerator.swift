@@ -22,9 +22,9 @@ public class SiteGenerator {
     
     private let fileManager = FileManager.default
     
-    public init(site: WebSite, rootURL: StaticString, buildDirectoryPath: String = "Build") throws {
+    public init(site: WebSite, buildDirectoryPath: String = "Build") throws {
         self.site = site
-        self.rootDirectory = try URL.packageDirectory(from: rootURL)
+        self.rootDirectory = fileManager.urls(for: .documentDirectory, in: .userDomainMask).first!
         
         buildDirectory = rootDirectory.appending(path: buildDirectoryPath)
         assetsDirectory = rootDirectory.appending(path: "Assets")
