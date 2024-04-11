@@ -10,15 +10,15 @@ import Foundation
 
 public class SiteGenerator {
     
-    var site: WebSite
+    private var site: WebSite
     
-    var rootDirectory: URL
+    private var rootDirectory: URL
     
-    var buildDirectory: URL
+    private var buildDirectory: URL
     
-    var assetsDirectory: URL
+    private var assetsDirectory: URL
     
-    var siteMaps: [SiteMapData] = []
+    private(set) var siteMaps: [SiteMapData] = []
     
     private let fileManager = FileManager.default
     
@@ -63,7 +63,7 @@ public class SiteGenerator {
                 guard let self else { return }
                 
                 do {
-                    try self.write(page.generateCodeBlock(), fileName: "\(page.name).html", to: buildDirectory)
+                    try self.write(page.generateCodeBlock(), fileName: "\(page.name).html", to: buildDirectory, priority: page.priority, changeFreq: page.changeFreq)
                 }
             }
             
@@ -72,7 +72,7 @@ public class SiteGenerator {
         }
     }
     
-    private func write(_ string: String, fileName: String, to directory: URL, priority: Int = 0) throws {
+    private func write(_ string: String, fileName: String, to directory: URL, priority: Double = 0, changeFreq: ChangeFrequency = .Never) throws {
         
         do {
             try fileManager.createDirectory(at: directory, withIntermediateDirectories: true)
@@ -84,7 +84,7 @@ public class SiteGenerator {
         
         do {
             try string.write(to: outputURL, atomically: true, encoding: .utf8)
-            self.addNewSiteMap(url: outputURL, priority: priority)
+            self.addNewSiteMap(data: SiteMapData(url: outputURL, priority: priority, changeFrequency: changeFreq))
             
         } catch {
             throw PageGeneratorError.failedToCreateBuildDirectory(outputURL)
@@ -121,8 +121,8 @@ public class SiteGenerator {
         
     }
     
-    private func addNewSiteMap(url: URL, priority: Int) {
-        self.siteMaps.append(SiteMapData(url: url, priority: priority))
+    private func addNewSiteMap(data: SiteMapData) {
+        self.siteMaps.append(data)
     }
     
     private func createCrawlerFolder() throws {

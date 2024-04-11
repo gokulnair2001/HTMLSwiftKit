@@ -7,8 +7,18 @@
 
 import Foundation
 
+public enum ChangeFrequency: String {
+    case Always
+    case Hourly
+    case Daily
+    case Weekly
+    case Monthly
+    case Yearly
+    case Never
+}
 
 struct SiteMapData {
     var url: URL
-    var priority: Int
+    var priority: Double
+    var changeFrequency: ChangeFrequency = .Never
 }
