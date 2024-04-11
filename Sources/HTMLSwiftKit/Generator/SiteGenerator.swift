@@ -85,7 +85,7 @@ public class SiteGenerator {
         
         do {
             try string.write(to: outputURL, atomically: true, encoding: .utf8)
-            self.addNewSiteMap(data: SiteMapData(path: fileName, priority: priority, changeFrequency: changeFreq))
+            self.addNewSiteMap(data: SiteMapData(path: "/\(fileName)", priority: priority, changeFrequency: changeFreq))
             
         } catch {
             throw PageGeneratorError.failedToCreateBuildDirectory(outputURL)

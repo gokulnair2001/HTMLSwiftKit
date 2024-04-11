@@ -15,7 +15,7 @@ struct SiteMapGenerator {
     func generateSiteMap() -> String {
         
         let locations = context.siteMaps.map {
-            "<url><loc>https://\(context.site.baseUrl)/\($0.path)</loc><priority>\($0.priority)</priority> <changefreq>\($0.changeFrequency.rawValue)</changefreq></url>"
+            "<url><loc>https://\(context.site.baseUrl)\($0.path)</loc><priority>\($0.priority)</priority> <changefreq>\($0.changeFrequency.rawValue)</changefreq></url>"
         }.joined()
 
         return """
