@@ -1,5 +1,5 @@
 //
-//  PageGeneratorError.swift
+//  SiteGeneratorError.swift
 //
 //
 //  Created by Gokul Nair on 07/04/24.
@@ -8,7 +8,7 @@
 import Foundation
 
 
-enum PageGeneratorError: LocalizedError {
+enum SiteGeneratorError: LocalizedError {
     
     case failedToClearBuildDirectory(URL)
     

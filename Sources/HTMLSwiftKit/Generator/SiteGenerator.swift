@@ -12,7 +12,7 @@ public class SiteGenerator {
     
     private(set) var site: WebSite
     
-    private var rootDirectory: URL
+    private(set) var rootDirectory: URL
     
     private var buildDirectory: URL
     
@@ -25,7 +25,15 @@ public class SiteGenerator {
     public init(site: WebSite, buildDirectoryPath: String = "Build") throws {
         self.site = site
         self.rootDirectory = fileManager.urls(for: .documentDirectory, in: .userDomainMask).first!
-        print("✅:\(rootDirectory.absoluteString)")
+        
+        buildDirectory = rootDirectory.appending(path: buildDirectoryPath)
+        assetsDirectory = rootDirectory.appending(path: "Assets")
+    }
+    
+    public init(site: WebSite, rootUrl: StaticString, buildDirectoryPath: String = "Build") throws {
+        self.site = site
+        self.rootDirectory = try URL.packageDirectory(from: rootUrl)
+        
         buildDirectory = rootDirectory.appending(path: buildDirectoryPath)
         assetsDirectory = rootDirectory.appending(path: "Assets")
     }
@@ -44,14 +52,14 @@ public class SiteGenerator {
             do {
                 try fileManager.removeItem(at: buildDirectory)
             } catch {
-                throw PageGeneratorError.failedToClearBuildDirectory(buildDirectory)
+                throw SiteGeneratorError.failedToClearBuildDirectory(buildDirectory)
             }
         }
         
         do {
             try fileManager.createDirectory(at: buildDirectory, withIntermediateDirectories: false)
         } catch {
-            throw PageGeneratorError.failedToClearBuildDirectory(buildDirectory)
+            throw SiteGeneratorError.failedToClearBuildDirectory(buildDirectory)
         }
     }
     
@@ -69,7 +77,7 @@ public class SiteGenerator {
             }
             
         } catch {
-            throw PageGeneratorError.failedToGeneratePage
+            throw SiteGeneratorError.failedToGeneratePage
         }
     }
     
@@ -78,7 +86,7 @@ public class SiteGenerator {
         do {
             try fileManager.createDirectory(at: directory, withIntermediateDirectories: true)
         } catch {
-            throw PageGeneratorError.failedToCreateBuildDirectory(directory)
+            throw SiteGeneratorError.failedToCreateBuildDirectory(directory)
         }
         
         let outputURL = directory.appending(path: fileName)
@@ -88,7 +96,7 @@ public class SiteGenerator {
             self.addNewSiteMap(data: SiteMapData(path: "/\(fileName)", priority: priority, changeFrequency: changeFreq))
             
         } catch {
-            throw PageGeneratorError.failedToCreateBuildDirectory(outputURL)
+            throw SiteGeneratorError.failedToCreateBuildDirectory(outputURL)
         }
     }
     
@@ -103,7 +111,7 @@ public class SiteGenerator {
             try fileManager.createDirectory(atPath: assetsDirectory.path(), withIntermediateDirectories: true)
             
         } catch {
-            throw PageGeneratorError.failedToCreateAssetDirectory(assetsDirectory)
+            throw SiteGeneratorError.failedToCreateAssetDirectory(assetsDirectory)
         }
     }
     
@@ -117,7 +125,7 @@ public class SiteGenerator {
         do {
             try content.write(to: outputUrl, atomically: true, encoding: .utf8)
         } catch {
-            throw PageGeneratorError.failedToCreateSiteMapFile(outputUrl)
+            throw SiteGeneratorError.failedToCreateSiteMapFile(outputUrl)
         }
         
     }
@@ -136,7 +144,7 @@ public class SiteGenerator {
         do {
             try content.write(to: outputUrl, atomically: true, encoding: .utf8)
         } catch {
-            throw PageGeneratorError.failedToCreateCrawlerFile(outputUrl)
+            throw SiteGeneratorError.failedToCreateCrawlerFile(outputUrl)
         }
     }
 }
