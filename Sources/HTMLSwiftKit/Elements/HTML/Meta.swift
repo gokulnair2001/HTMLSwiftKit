@@ -23,4 +23,10 @@ public struct Meta: HTMLBlock {
         self.init()
         self.content = "<meta name='\(name)' content='\(content)'>"
     }
+    
+    init(property: String, content: String) {
+        self.init()
+        self.content = "<meta property='\(property)' content='\(content)'>"
+    }
+   
 }
