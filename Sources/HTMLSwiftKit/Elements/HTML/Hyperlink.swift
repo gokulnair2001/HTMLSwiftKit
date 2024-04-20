@@ -15,4 +15,8 @@ public struct Hyperlink: HTMLBlock {
     public init(href: String, _ text: String) {
         self.content = "<a href='\(href)'>\(text)</a>"
     }
+    
+    public init(page: HTMLPage, _ text: String) {
+        self.content = "<a href='\(page.name).html'>\(text)</a>"
+    }
 }
