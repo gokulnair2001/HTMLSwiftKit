@@ -23,10 +23,10 @@ public protocol WebSite {
     var crawlerConfiguration: CrawlerConfiguration { get }
     
     @available(iOS 16.0, *)
-    func publish(buildDirectoryPath: String) throws
+    func publishViaDevice(buildDirectoryPath: String) throws
     
     @available(macOS 13.0, *)
-    func publish(rootUrl: StaticString, buildDirectoryPath: String) throws
+    func publishViaSPM(rootUrl: StaticString, buildDirectoryPath: String) throws
 }
 
 public extension WebSite {
@@ -41,7 +41,7 @@ public extension WebSite {
         return DefaultCrawlerConfiguration()
     }
     
-    func publish(buildDirectoryPath: String = "Build") throws {
+    func publishViaDevice(buildDirectoryPath: String = "Build") throws {
         
         let generator = try SiteGenerator(site: self, buildDirectoryPath: buildDirectoryPath)
         
@@ -51,7 +51,7 @@ public extension WebSite {
         
     }
     
-    func publish(rootUrl: StaticString = #file, buildDirectoryPath: String = "Builds") throws {
+    func publishViaSPM(rootUrl: StaticString = #file, buildDirectoryPath: String = "Builds") throws {
         
         let generator = try SiteGenerator(site: self, rootUrl: rootUrl, buildDirectoryPath: buildDirectoryPath)
         
