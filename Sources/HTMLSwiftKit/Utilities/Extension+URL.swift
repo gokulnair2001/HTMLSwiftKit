@@ -10,6 +10,7 @@ import Foundation
 
 extension URL {
     
+    /// Package File locator
     public static func packageDirectory(from filePath: StaticString) throws -> URL {
         
         var currentURL = URL(filePath: filePath.description)

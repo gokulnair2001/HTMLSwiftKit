@@ -8,6 +8,7 @@
 import Foundation
 
 /// All the Crawler supported by HTMLSwiftKit
+/// A web crawler downloads and indexes content from all over the Internet. The goal of a crawler is to learn what every webpage on the web is about, so that the information can be retrieved when it's needed
 public enum Crawler: String {
     
     /// Apple Bot
