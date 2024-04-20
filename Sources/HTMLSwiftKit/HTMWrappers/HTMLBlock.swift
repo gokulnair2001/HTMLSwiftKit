@@ -8,6 +8,7 @@
 import Foundation
 
 
+
 public protocol HTMLBlock {
     
     var content: String { get }

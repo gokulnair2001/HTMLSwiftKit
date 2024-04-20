@@ -8,10 +8,13 @@
 import Foundation
 
 
+/// SiteMap Generator
 struct SiteMapGenerator {
     
+    /// Sitemap Generator context
     var context: SiteGenerator
 
+    /// Sitemap generation
     func generateSiteMap() -> String {
         
         let locations = context.siteMaps.map {

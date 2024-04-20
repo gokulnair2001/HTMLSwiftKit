@@ -7,7 +7,7 @@
 
 import Foundation
 
-
+/// A default crawler configuration 
 struct DefaultCrawlerConfiguration: CrawlerConfiguration {
     
     init() { }

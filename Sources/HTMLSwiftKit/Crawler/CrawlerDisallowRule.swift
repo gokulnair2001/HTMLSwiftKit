@@ -7,11 +7,14 @@
 
 import Foundation
 
-
+/// Crawler disallow rule
 public struct CrawlerDisallowRule {
     
+    /// Agent/Crawler name
     var agent: String
+    /// Paths to disallow crawling
     var paths: [String]
+    
     
     public init(agent: String, paths: [String]) {
         self.agent = agent

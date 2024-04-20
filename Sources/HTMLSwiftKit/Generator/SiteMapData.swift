@@ -7,6 +7,8 @@
 
 import Foundation
 
+
+/// Site Map Change frequency
 public enum ChangeFrequency: String {
     case Always
     case Hourly
@@ -17,8 +19,15 @@ public enum ChangeFrequency: String {
     case Never
 }
 
+/// Site Map Data model
 struct SiteMapData {
+    
+    /// page path
     var path: String
+    
+    /// crawler priority
     var priority: Double
+    
+    /// Crawling check frequency
     var changeFrequency: ChangeFrequency
 }

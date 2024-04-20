@@ -8,10 +8,13 @@
 import Foundation
 
 
+/// Crawler file generator
 struct CrawlerGenerator {
     
+    /// Uses the Website data to get the Crawler details
     var site: any WebSite
 
+    /// Generates crawler rules
     func generateCrawlers() -> String {
         
         let disallowRules = site.crawlerConfiguration.disallowRules.map { rule in

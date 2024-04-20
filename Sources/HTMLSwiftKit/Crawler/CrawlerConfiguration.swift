@@ -7,9 +7,10 @@
 
 import Foundation
 
-
+/// Configuration protocol for crawlers
 public protocol CrawlerConfiguration {
     
+    /// Disallow rules to apply
     var disallowRules: [CrawlerDisallowRule] { get }
     
 }
