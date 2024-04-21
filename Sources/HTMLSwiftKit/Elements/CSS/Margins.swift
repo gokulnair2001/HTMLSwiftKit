@@ -8,6 +8,7 @@
 import Foundation
 
 
+/// Margins modifiers sets Margins for the element
 public struct Margins: CSSModifier {
     
     public var content: String

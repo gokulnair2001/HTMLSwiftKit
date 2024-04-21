@@ -8,8 +8,10 @@
 import Foundation
 
 
+/// Text alignment modifier sets alignment for text
 public struct TextAlignment: CSSModifier {
     
+    /// Supported alignment types
     public enum Alignment: String {
         case left
         case right

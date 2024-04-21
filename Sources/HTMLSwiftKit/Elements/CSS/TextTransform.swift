@@ -8,8 +8,10 @@
 import Foundation
 
 
+/// TextTransform modifier transforms texts with the provided transformer
 public struct TextTransform: CSSModifier {
     
+    /// Supported Transform types
     public enum Transform: String {
         case none
         case uppercase

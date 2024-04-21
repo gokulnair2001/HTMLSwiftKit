@@ -8,6 +8,7 @@
 import Foundation
 
 
+/// Color modifier is used to add color on any element
 public struct Color: CSSModifier {
     
     public var content: String

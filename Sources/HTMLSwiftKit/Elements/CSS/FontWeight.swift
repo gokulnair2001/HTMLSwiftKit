@@ -8,8 +8,10 @@
 import Foundation
 
 
+/// FontWeight add various weight on text
 public struct FontWeight: CSSModifier {
     
+    /// Supported weight types
     public enum Weight {
         case normal
         case bold

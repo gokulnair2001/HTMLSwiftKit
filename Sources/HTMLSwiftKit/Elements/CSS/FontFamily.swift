@@ -8,6 +8,7 @@
 import Foundation
 
 
+/// Font family modifier helps to add various font type on text
 public struct FontFamily: CSSModifier {
     
     public var content: String

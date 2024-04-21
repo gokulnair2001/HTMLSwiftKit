@@ -7,8 +7,11 @@
 
 import Foundation
 
+
+/// Border modifier is used to add various kinds of border on elements
 public struct Border: CSSModifier {
     
+    /// Available border types
     public enum BorderType: String {
         case none
         case hidden

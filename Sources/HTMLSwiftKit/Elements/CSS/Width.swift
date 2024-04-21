@@ -8,6 +8,7 @@
 import Foundation
 
 
+/// Width modifiers sets width for the element
 public struct Width: CSSModifier {
     
     public var content: String

@@ -8,8 +8,10 @@
 import Foundation
 
 
+/// TextDecoration adds various forms of decorations on text
 public struct TextDecoration: CSSModifier {
     
+    /// Supported Decoration types
     public enum Decoration: String {
         case none
         case underline
@@ -18,6 +20,7 @@ public struct TextDecoration: CSSModifier {
         case blink = "blink"
     }
     
+    /// Supported decoration styles
     public enum DecorationStyle: String {
         case solid
         case double

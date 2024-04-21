@@ -8,6 +8,7 @@
 import Foundation
 
 
+/// FontSize modifier is used to add text size
 public struct FontSize: CSSModifier {
     
     public var content: String

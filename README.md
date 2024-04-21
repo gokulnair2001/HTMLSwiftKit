@@ -1,4 +1,4 @@
 HTMLSwiftKit
 
-About
+## About
 Swift based Static Site generator

@@ -8,8 +8,10 @@
 import Foundation
 
 
+/// Padding modifier adds padding to element with respect to the side
 public struct Padding: CSSModifier {
     
+    /// Side from which padding needs to be set
     public enum PaddingFrom: String {
         case top
         case right

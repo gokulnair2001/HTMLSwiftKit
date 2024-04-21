@@ -7,6 +7,8 @@
 
 import Foundation
 
+
+/// The BackgroundColor modifier is used to add background color for elements.
 public struct BackgroundColor: CSSModifier {
     
     public var content: String
