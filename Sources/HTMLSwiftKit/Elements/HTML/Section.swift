@@ -8,6 +8,7 @@
 import Foundation
 
 
+/// Section modifier is used to group together related elements
 public struct Section: HTMLBlock {
     
     public var content: String = ""

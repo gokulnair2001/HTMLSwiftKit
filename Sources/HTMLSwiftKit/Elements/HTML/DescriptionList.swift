@@ -8,6 +8,7 @@
 import Foundation
 
 
+/// DescriptionList modifier is used to associate terms with their relevant descriptions
 public struct DescriptionList: HTMLBlock {
     
     public var content: String = ""

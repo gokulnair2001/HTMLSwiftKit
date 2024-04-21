@@ -10,7 +10,6 @@ import Foundation
 
 /// A new tag introduced in HTMLSwiftKit
 /// Text tag is used while interpolating texts
-
 public struct Text: HTMLBlock {
     
     public var content: String

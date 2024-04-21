@@ -8,6 +8,7 @@
 import Foundation
 
 
+/// Noscript modifier is used to display the alternate text on the browser that does not support scripts.
 public struct NoScript: HTMLBlock {
     
     public var content: String

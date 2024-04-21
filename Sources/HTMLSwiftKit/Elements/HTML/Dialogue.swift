@@ -8,6 +8,7 @@
 import Foundation
 
 
+/// Dialogue modifier defines a dialog box or subwindow
 public struct Dialogue: HTMLBlock {
     
     public enum State: String {

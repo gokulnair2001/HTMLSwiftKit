@@ -8,6 +8,7 @@
 import Foundation
 
 
+/// DescriptionTerm modifier is used to describe a term/name in a description list
 public struct DescriptionTerm: HTMLBlock {
     
     public var content: String

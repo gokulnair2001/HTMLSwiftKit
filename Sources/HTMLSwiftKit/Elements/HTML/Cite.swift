@@ -8,6 +8,7 @@
 import Foundation
 
 
+/// Cite tag is used to identify the source of a quote.
 public struct Cite: HTMLBlock {
     
     public var content: String

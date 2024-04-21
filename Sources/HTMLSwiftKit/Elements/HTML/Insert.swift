@@ -8,6 +8,7 @@
 import Foundation
 
 
+/// Insert modifier defines a text that has been inserted into a document
 public struct Insert: HTMLBlock {
     
     public var content: String

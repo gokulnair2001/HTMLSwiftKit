@@ -1,5 +1,5 @@
 //
-//  Divider.swift
+//  Division.swift
 //  HTMLSwiftKitTest
 //
 //  Created by Gokul Nair on 01/04/24.
@@ -8,7 +8,7 @@
 import Foundation
 
 
-public struct Divider: HTMLBlock {
+public struct Division: HTMLBlock {
     
     public var content: String = ""
     

@@ -8,6 +8,7 @@
 import Foundation
 
 
+/// Body modifier is similar to body tag in html
 public struct Body: HTMLBlock {
     
     private var htmlCode: String = ""

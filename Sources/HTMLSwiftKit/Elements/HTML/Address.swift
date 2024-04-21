@@ -8,6 +8,7 @@
 import Foundation
 
 
+/// Address tag defines the contact information for the author/owner of a document or an article
 public struct Address: HTMLBlock {
     
     public var content: String = ""

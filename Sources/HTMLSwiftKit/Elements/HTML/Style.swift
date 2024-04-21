@@ -8,6 +8,7 @@
 import Foundation
 
 
+/// Style modifier is used to define style information (CSS) for a document
 public struct Style: HTMLBlock {
     
     private var cssCode: String = ""

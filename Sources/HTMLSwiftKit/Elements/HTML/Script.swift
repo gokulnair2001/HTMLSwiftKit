@@ -8,6 +8,7 @@
 import Foundation
 
 
+/// Script modifier is used to embed a client-side script (JavaScript)
 public struct Script: HTMLBlock {
     
     public var content: String

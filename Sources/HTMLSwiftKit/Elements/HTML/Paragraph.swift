@@ -8,6 +8,7 @@
 import Foundation
 
 
+/// Paragraph modifier defines a paragraph of text
 public struct Paragraph: HTMLBlock {
     
     public var content: String

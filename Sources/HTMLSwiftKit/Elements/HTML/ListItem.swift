@@ -8,6 +8,7 @@
 import Foundation
 
 
+/// ListItem modifier is used to represent an item in a list.
 public struct ListItem: HTMLBlock {
     
     public var content: String

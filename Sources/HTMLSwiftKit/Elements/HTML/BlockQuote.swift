@@ -8,6 +8,7 @@
 import Foundation
 
 
+/// BlockQuote tag specifies a section that is quoted from another source.
 public struct BlockQuote: HTMLBlock {
     
     public var content: String

@@ -8,6 +8,7 @@
 import Foundation
 
 
+/// Break modifier inserts a single line break
 public struct Break: HTMLBlock {
     
     public var content: String {

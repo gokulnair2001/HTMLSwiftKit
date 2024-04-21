@@ -8,8 +8,8 @@
 import Foundation
 
 
+/// Details modifier specifies additional details that the user can open and close on demand
 public struct Details: HTMLBlock {
-    
     
     public var content: String = ""
     

@@ -8,8 +8,10 @@
 import Foundation
 
 
+/// Heading modifier is used to define HTML headings
 public struct Heading: HTMLBlock {
     
+    /// Heading(H1-H6) support 
     public enum HeaderType: String {
         case h1
         case h2

@@ -8,6 +8,7 @@
 import Foundation
 
 
+/// Description modifier used to describe a term/name in a description list
 public struct Description: HTMLBlock {
     
     public var content: String

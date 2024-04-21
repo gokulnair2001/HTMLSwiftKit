@@ -8,6 +8,7 @@
 import Foundation
 
 
+/// Defines a hyperlink, which is used to link from one page to another
 public struct Hyperlink: HTMLBlock {
     
     public var content: String

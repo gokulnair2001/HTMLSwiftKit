@@ -8,6 +8,7 @@
 import Foundation
 
 
+/// Code modifier used to define a piece of computer code
 public struct Code: HTMLBlock {
     
     public var content: String

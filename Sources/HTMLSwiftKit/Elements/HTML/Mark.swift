@@ -8,6 +8,7 @@
 import Foundation
 
 
+/// Mark modifier is used to mark or highlight text that is of special interest or relevance
 public struct Mark: HTMLBlock {
     
     public var content: String

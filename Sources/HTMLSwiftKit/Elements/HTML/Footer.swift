@@ -8,6 +8,7 @@
 import Foundation
 
 
+/// Footer modifier used to identify the footer of a page, document, article, or section
 public struct Footer: HTMLBlock {
     
     public var content: String = ""
