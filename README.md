@@ -162,14 +162,14 @@ Currently the kit supports the following of HTML elements:
 | -- | -- | -- | -- |
 | Address | BlockQuote | Body | Break |
 | Button | Cite | Code | Delete |
-| Description | DescriptionList | descriptionTerm | Details |
+| Description | DescriptionList | DescriptionTerm | Details |
 | Dialouge | Division | Footer | Head |
 | Heading | HorizontalRule | Hyperlink | Image |
 | Insert | ListItem | Mark | Meta |
 | NoScript | OrderedList | Paragraph | Script |
 | Span | Style | UnorderedList | |
 
-
+Raise an issue if you want to add any new element into the kit.
 
 
 
