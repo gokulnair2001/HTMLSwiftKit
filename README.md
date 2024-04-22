@@ -158,19 +158,16 @@ Raise an issue if you want to add any new modifier into the kit.
 
 Currently the kit supports the following of HTML elements:
 
-| Elements | Elements |
-| -- | -- |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
+| Elements | Elements | Elements | Elements |
+| -- | -- | -- | -- |
+| Address | BlockQuote | Body | Break |
+| Button | Cite | Code | Delete |
+| Description | DescriptionList | descriptionTerm | Details |
+| Dialouge | Division | Footer | Head |
+| Heading | HorizontalRule | Hyperlink | Image |
+| Insert | ListItem | Mark | Meta |
+| NoScript | OrderedList | Paragraph | Script |
+| Span | Style | UnorderedList | |
 
 
 
