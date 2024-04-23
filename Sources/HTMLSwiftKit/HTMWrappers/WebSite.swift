@@ -66,6 +66,7 @@ public extension WebSite {
             try generator.generate()
         }
         
+        debugPrint("HTMLSwiftKit: Build is available at \(generator.rootDirectory.absoluteString)")
     }
     
     /// Publisher
