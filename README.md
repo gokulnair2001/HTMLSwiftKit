@@ -46,7 +46,7 @@ Creating a site is pretty simple with HTMLSwiftKit:
       }
     }
  ```
-   Create a struct implement the ```CSSBlock``` protocol and provide the CSS type and start adding your styling modifiers.
+   Create a struct implement the ```CSSBlock``` protocol and provide the [CSS type]() and start adding your styling modifiers.
 
 > [!Note]
 > Make sure you add your CSS block into your HTMLContent block to allow HTML to get context of it
@@ -99,6 +99,8 @@ struct StartWebsite {
     }
 }
 ```
+On generating Site via SPM, the kit creates a Build folder into your existing package.
+
 Check this starter project to understand more.
 
 ### 2. Using iOS Device
@@ -119,6 +121,8 @@ struct StartWebsite {
     }
 }
 ```
+
+
 Check this starter project to understand more.
 
 By following the given procedure you can build your static site easily.
@@ -181,6 +185,17 @@ Currently we only have one such element:
 | -- | -- |
 | Text | Used while interpolating texts |
 
+# CSS Type
 
+Primarily we have two kinds of CSS Type:
 
+1. Source
+   * Source type CSS are used when created CSS is applied on any source tag
+   * Want to create CSS for Button, Divider, Heading etc, set CSS type to Source
+     
+2. Custom
+   * Custom type CSS is used when created CSS is a custom class
+   * Use this when any form of custom CSS needs to be used
+  
+   Providing a correct CSS type is important, since this will case change in Source code generation
 
