@@ -38,7 +38,7 @@ Creating a site is pretty simple with HTMLSwiftKit:
 
 Want to add CSS to your Webpage, HTMLSwiftKit covers that too.
 
-Create a struct implement the ```CSSBlock``` protocol and provide the [CSS type](#CSSType) and start adding your styling modifiers.
+Create a struct implement the ```CSSBlock``` protocol and provide the [CSS type](#css-type) and start adding your styling modifiers.
 
  ```swift
     struct BasicCSS: CSSBlock {
