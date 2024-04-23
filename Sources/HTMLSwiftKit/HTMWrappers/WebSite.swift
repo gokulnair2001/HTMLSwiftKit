@@ -60,7 +60,7 @@ public extension WebSite {
     /// Publisher
     func publishViaDevice(buildDirectoryPath: String = "Build") throws {
         
-        let generator = try SiteGenerator(site: self, buildDirectoryPath: buildDirectoryPath)
+        let generator = SiteGenerator(site: self, buildDirectoryPath: buildDirectoryPath)
         
         do {
             try generator.generate()

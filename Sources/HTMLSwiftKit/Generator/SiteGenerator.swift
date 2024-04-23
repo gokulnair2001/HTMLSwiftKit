@@ -29,7 +29,7 @@ public class SiteGenerator {
     private let fileManager = FileManager.default
     
     /// Used when site generation needs to be done via Device
-    public init(site: WebSite, buildDirectoryPath: String = "Build") throws {
+    public init(site: WebSite, buildDirectoryPath: String = "Build") {
         self.site = site
         self.rootDirectory = fileManager.urls(for: .documentDirectory, in: .userDomainMask).first!
         
