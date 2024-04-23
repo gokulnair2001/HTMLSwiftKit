@@ -1,5 +1,5 @@
 
-![Group 1](https://github.com/gokulnair2001/HTMLSwiftKit/assets/56252259/741d70cb-e422-4050-8f1a-64d1581f1df0)
+![HSK Logo](https://github.com/gokulnair2001/HTMLSwiftKit/assets/56252259/44a40489-fa65-49e7-b626-d2dc1ca36c30)
 
 # HTMLSwiftKit
 
