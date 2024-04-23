@@ -3,9 +3,9 @@
 
 # HTMLSwiftKit
 
-HTMLSwiftKit is a Swift based wrapper on HTML that simplifies the creation of static sites, making the process easy and straightforward. The kit includes all the essential HTML tags that can be directly used in Swift.
+HTMLSwiftKit is a Swift framework that simplifies the creation of static sites. The kit aims to convert your Swift written code to HTML, thus making your site generation process easy with Swift and handeling the HTML complexities under the hood. The goal of HTMLSwiftKit is to enable anyone with basic HTML knowledge to develop websites in Swift. 
 
-HTMLSwiftKit aims to convert your Swift written code to HTML, thus making your site generation process easy with Swift and handeling the HTML complexities under the hood. The goal of HTMLSwiftKit is to enable anyone with basic HTML knowledge to develop websites in Swift.
+It includes all the essential HTML tags that are modifeied as per swift language whhich can be directly used. Now start generating your websites using swift.
 
 # Getting Started
 
@@ -13,7 +13,9 @@ Creating a site is pretty simple with HTMLSwiftKit:
 
 ### 1. Create HTML Page
    
-   Every website have few pages associated with it, lets see how to make a HTMLPage using HTMLKit
+   Every website have few pages associated with it, lets see how to make a HTMLPage using HTMLSwiftKit
+
+   Create a struct and implement the ```HTMLPage``` protocol, and you are good to start building your page.
 
 ```swift
    struct FirstPage: HTMLPage {
@@ -29,11 +31,14 @@ Creating a site is pretty simple with HTMLSwiftKit:
        }
     }
 ```
-   Create a struct and implement the ```HTMLPage``` protocol, and you are good to start building your page.
+> [!Tip]
+> Start adding your HTML elements inside htmlContent block just like HTML without < > tag
 
 ### 2. Create CSS
 
- Now just like every normal HTML page you need to give some CSS to it, so HTMLSwiftKit covers that too.
+Want to add CSS to your Webpage, HTMLSwiftKit covers that too.
+
+Create a struct implement the ```CSSBlock``` protocol and provide the [CSS type](#CSSType) and start adding your styling modifiers.
 
  ```swift
     struct BasicCSS: CSSBlock {
@@ -49,8 +54,7 @@ Creating a site is pretty simple with HTMLSwiftKit:
       }
     }
  ```
-   Create a struct implement the ```CSSBlock``` protocol and provide the [CSS type]() and start adding your styling modifiers.
-
+  
 > [!Note]
 > Make sure you add your CSS block into your HTMLContent block to allow HTML to get context of it
 
