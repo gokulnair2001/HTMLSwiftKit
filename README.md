@@ -121,7 +121,10 @@ struct StartWebsite {
     }
 }
 ```
+Here once the build file is generated, the console will print the Build location. Checkout the location to get the Build file.
 
+> [!Note]
+> Console will print "HTMLSwiftKit: Build is available at ```pathURL``` "
 
 Check this starter project to understand more.
 
@@ -189,13 +192,29 @@ Currently we only have one such element:
 
 Primarily we have two kinds of CSS Type:
 
-1. Source
+### 1. Source
    * Source type CSS are used when created CSS is applied on any source tag
    * Want to create CSS for Button, Divider, Heading etc, set CSS type to Source
      
-2. Custom
+### 2. Custom
    * Custom type CSS is used when created CSS is a custom class
    * Use this when any form of custom CSS needs to be used
   
    Providing a correct CSS type is important, since this will case change in Source code generation
+
+# Block Builders
+
+HTMLSwiftKit have three block builder:
+
+### 1. HtmlBlockBuilder
+
+   All the HTML blocks will be rendered by this block. When you are creating any HTML Content, the modifiers must be wrapped by this builder block.
+
+### 2. CSSModifierBuilder 
+
+   All the CSS styling blocks are rendered by this block. When adding any type of CSS styling make sure the modifiers are wrapped by this builder block.
+ 
+### 3. CSSBlockBuilder
+
+   While injecting a CSS into the HTMLBlock we will use Style block. Now style block can have various types of CSS. Thus to incorporate these multiple styles we have this block builder.
 
