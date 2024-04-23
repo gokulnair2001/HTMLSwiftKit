@@ -1,3 +1,6 @@
+
+![Group 1](https://github.com/gokulnair2001/HTMLSwiftKit/assets/56252259/741d70cb-e422-4050-8f1a-64d1581f1df0)
+
 # HTMLSwiftKit
 
 HTMLSwiftKit is a Swift based wrapper on HTML that simplifies the creation of static sites, making the process easy and straightforward. The kit includes all the essential HTML tags that can be directly used in Swift.
