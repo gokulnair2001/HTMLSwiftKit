@@ -56,7 +56,7 @@ Create a struct implement the ```CSSBlock``` protocol and provide the [CSS type]
  ```
   
 > [!Note]
-> Make sure you add your CSS block into your HTMLContent block to allow HTML to get context of it
+> Don't forget to add your CSS block into your HTMLContent block to allow HTML to get context of it
 
 ```swift
  var htmlContent: [HTMLBlock] {
@@ -67,6 +67,8 @@ Create a struct implement the ```CSSBlock``` protocol and provide the [CSS type]
 ### 3. Configure Website
 
 Once the HTMLPages and CSS are ready, now its tme to configure your website
+
+Create a struct implement the ```website``` protocol and provide the necessary data and you have configured your website.
 
    ```swift
     struct MyWebSite: WebSite {
@@ -80,7 +82,6 @@ Once the HTMLPages and CSS are ready, now its tme to configure your website
         var crawlerConfiguration: CrawlerConfiguration = CrawlerConfig()
     }
    ```
-Create a struct implement the ```website``` protocol and provide the necessary data and you have configured your website.
 
 ### 4. Generate/Publish
 
@@ -225,3 +226,9 @@ HTMLSwiftKit have three block builder:
 
    While injecting a CSS into the HTMLBlock we will use Style block. Now style block can have various types of CSS. Thus to incorporate these multiple styles we have this block builder.
 
+# License
+
+
+<p align="center" width="100%">
+   Made with ❤️ in 🇮🇳 By Gokul Nair   
+</p>
