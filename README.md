@@ -89,7 +89,7 @@ Once you are ready with your Website configuration now its time to generate the 
 
 So HTMLSwiftKit provides two way to generate your source code:
 
-### 1. Using SPM
+### A. Using SPM
 
 To generate the site via SPM, create your own new SPM, add HTMLSwiftKit as a dependency and configure the above mentioned things. Once you have done all the stpes mentioned create an instance of the website and trigger the ```publishViaSPM()``` method
 
@@ -111,7 +111,7 @@ On generating Site via SPM, the kit creates a Build folder into your existing pa
 
 Check this starter project to understand more.
 
-### 2. Using iOS Device
+### B. Using iOS Device
 
 To generate the site via Device, create a new project and add HTMLSwiftKit as a dependency and configure the above mentioned things. Once you have done all the stpes mentioned create an instance of the website and trigger the ```publishViaDevice()``` method
 
@@ -167,7 +167,8 @@ Currently the kit supports the following of CSS modifiers:
 | TextTransform | Width |
 | Height |  |
 
-Raise an issue if you want to add any new modifier into the kit.
+All the details regarding the modifiers are added in their respective classes, do check them out to know more.
+Raise an issue with the details regarding the required modifier, and I will try to get it into the kit.
 
 # HTML Blocks
 
@@ -184,7 +185,8 @@ Currently the kit supports the following of HTML elements:
 | NoScript | OrderedList | Paragraph | Script |
 | Span | Style | UnorderedList | |
 
-Raise an issue if you want to add any new element into the kit.
+All the details regarding the elements are added in their respective classes, do check them out to know more.
+Raise an issue with the details regarding the required element, and I will try to get it into the kit.
 
 # Kit Specific Element
 
@@ -200,29 +202,29 @@ Currently we only have one such element:
 
 Primarily we have two kinds of CSS Type:
 
-### 1. Source
+### A. Source
    * Source type CSS are used when created CSS is applied on any source tag
    * Want to create CSS for Button, Divider, Heading etc, set CSS type to Source
      
-### 2. Custom
+### B. Custom
    * Custom type CSS is used when created CSS is a custom class
    * Use this when any form of custom CSS needs to be used
   
-   Providing a correct CSS type is important, since this will case change in Source code generation
+   Providing a correct CSS type is important, since this will cause imapct in Source code generation
 
 # Block Builders
 
 HTMLSwiftKit have three block builder:
 
-### 1. HtmlBlockBuilder
+### A. HtmlBlockBuilder
 
    All the HTML blocks will be rendered by this block. When you are creating any HTML Content, the modifiers must be wrapped by this builder block.
 
-### 2. CSSModifierBuilder 
+### B. CSSModifierBuilder 
 
    All the CSS styling blocks are rendered by this block. When adding any type of CSS styling make sure the modifiers are wrapped by this builder block.
  
-### 3. CSSBlockBuilder
+### C. CSSBlockBuilder
 
    While injecting a CSS into the HTMLBlock we will use Style block. Now style block can have various types of CSS. Thus to incorporate these multiple styles we have this block builder.
 
