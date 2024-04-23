@@ -46,7 +46,7 @@ Creating a site is pretty simple with HTMLSwiftKit:
       }
     }
  ```
-   Create a struct implement the ```CSSBlock``` protocol and provide the CSS type and you start adding your styling modifiers.
+   Create a struct implement the ```CSSBlock``` protocol and provide the CSS type and start adding your styling modifiers.
 
 > [!Note]
 > Make sure you add your CSS block into your HTMLContent block to allow HTML to get context of it
@@ -170,6 +170,16 @@ Currently the kit supports the following of HTML elements:
 | Span | Style | UnorderedList | |
 
 Raise an issue if you want to add any new element into the kit.
+
+# Kit Specific Element
+
+Now there are few elements which are very specific to this kit. These elements are made to bridge the gap that swift cant handle directly. 
+
+Currently we only have one such element:
+
+| Element | Description |
+| -- | -- |
+| Text | Used while interpolating texts |
 
 
 
