@@ -1,8 +1,11 @@
+
+![HSK Logo](https://github.com/gokulnair2001/HTMLSwiftKit/assets/56252259/44a40489-fa65-49e7-b626-d2dc1ca36c30)
+
 # HTMLSwiftKit
 
-HTMLSwiftKit is a Swift based wrapper on HTML that simplifies the creation of static sites, making the process easy and straightforward. The kit includes all the essential HTML tags that can be directly used in Swift.
+HTMLSwiftKit is a Swift framework that simplifies the creation of static sites. The kit aims to convert your Swift written code to HTML, thus making your site generation process easy with Swift and handeling the HTML complexities under the hood. The goal of HTMLSwiftKit is to enable anyone with basic HTML knowledge to develop websites in Swift. 
 
-HTMLSwiftKit aims to convert your Swift written code to HTML, thus making your site generation process easy with Swift and handeling the HTML complexities under the hood. The goal of HTMLSwiftKit is to enable anyone with basic HTML knowledge to develop websites in Swift.
+It includes all the essential HTML tags that are modifeied as per swift language whhich can be directly used. Now start generating your websites using swift.
 
 # Getting Started
 
@@ -10,7 +13,9 @@ Creating a site is pretty simple with HTMLSwiftKit:
 
 ### 1. Create HTML Page
    
-   Every website have few pages associated with it, lets see how to make a HTMLPage using HTMLKit
+   Every website have few pages associated with it, lets see how to make a HTMLPage using HTMLSwiftKit
+
+   Create a struct and implement the ```HTMLPage``` protocol, and you are good to start building your page.
 
 ```swift
    struct FirstPage: HTMLPage {
@@ -26,11 +31,14 @@ Creating a site is pretty simple with HTMLSwiftKit:
        }
     }
 ```
-   Create a struct and implement the ```HTMLPage``` protocol, and you are good to start building your page.
+> [!Tip]
+> Start adding your HTML elements inside htmlContent block just like HTML without < > tag
 
 ### 2. Create CSS
 
- Now just like every normal HTML page you need to give some CSS to it, so HTMLSwiftKit covers that too.
+Want to add CSS to your Webpage, HTMLSwiftKit covers that too.
+
+Create a struct implement the ```CSSBlock``` protocol and provide the [CSS type](#css-type) and start adding your styling modifiers.
 
  ```swift
     struct BasicCSS: CSSBlock {
@@ -46,10 +54,9 @@ Creating a site is pretty simple with HTMLSwiftKit:
       }
     }
  ```
-   Create a struct implement the ```CSSBlock``` protocol and provide the [CSS type]() and start adding your styling modifiers.
-
+  
 > [!Note]
-> Make sure you add your CSS block into your HTMLContent block to allow HTML to get context of it
+> Don't forget to add your CSS block into your HTMLContent block to allow HTML to get context of it
 
 ```swift
  var htmlContent: [HTMLBlock] {
@@ -60,6 +67,8 @@ Creating a site is pretty simple with HTMLSwiftKit:
 ### 3. Configure Website
 
 Once the HTMLPages and CSS are ready, now its tme to configure your website
+
+Create a struct implement the ```website``` protocol and provide the necessary data and you have configured your website.
 
    ```swift
     struct MyWebSite: WebSite {
@@ -73,7 +82,6 @@ Once the HTMLPages and CSS are ready, now its tme to configure your website
         var crawlerConfiguration: CrawlerConfiguration = CrawlerConfig()
     }
    ```
-Create a struct implement the ```website``` protocol and provide the necessary data and you have configured your website.
 
 ### 4. Generate/Publish
 
@@ -81,7 +89,7 @@ Once you are ready with your Website configuration now its time to generate the 
 
 So HTMLSwiftKit provides two way to generate your source code:
 
-### 1. Using SPM
+### A. Using SPM
 
 To generate the site via SPM, create your own new SPM, add HTMLSwiftKit as a dependency and configure the above mentioned things. Once you have done all the stpes mentioned create an instance of the website and trigger the ```publishViaSPM()``` method
 
@@ -103,7 +111,7 @@ On generating Site via SPM, the kit creates a Build folder into your existing pa
 
 Check this starter project to understand more.
 
-### 2. Using iOS Device
+### B. Using iOS Device
 
 To generate the site via Device, create a new project and add HTMLSwiftKit as a dependency and configure the above mentioned things. Once you have done all the stpes mentioned create an instance of the website and trigger the ```publishViaDevice()``` method
 
@@ -121,7 +129,10 @@ struct StartWebsite {
     }
 }
 ```
+Here once the build file is generated, the console will print the Build location. Checkout the location to get the Build file.
 
+> [!Note]
+> Console will print "HTMLSwiftKit: Build is available at ```pathURL``` "
 
 Check this starter project to understand more.
 
@@ -156,7 +167,8 @@ Currently the kit supports the following of CSS modifiers:
 | TextTransform | Width |
 | Height |  |
 
-Raise an issue if you want to add any new modifier into the kit.
+All the details regarding the modifiers are added in their respective classes, do check them out to know more.
+Raise an issue with the details regarding the required modifier, and I will try to get it into the kit.
 
 # HTML Blocks
 
@@ -173,7 +185,8 @@ Currently the kit supports the following of HTML elements:
 | NoScript | OrderedList | Paragraph | Script |
 | Span | Style | UnorderedList | |
 
-Raise an issue if you want to add any new element into the kit.
+All the details regarding the elements are added in their respective classes, do check them out to know more.
+Raise an issue with the details regarding the required element, and I will try to get it into the kit.
 
 # Kit Specific Element
 
@@ -189,13 +202,54 @@ Currently we only have one such element:
 
 Primarily we have two kinds of CSS Type:
 
-1. Source
+### A. Source
    * Source type CSS are used when created CSS is applied on any source tag
    * Want to create CSS for Button, Divider, Heading etc, set CSS type to Source
      
-2. Custom
+### B. Custom
    * Custom type CSS is used when created CSS is a custom class
    * Use this when any form of custom CSS needs to be used
   
-   Providing a correct CSS type is important, since this will case change in Source code generation
+   Providing a correct CSS type is important, since this will cause imapct in Source code generation
 
+# Block Builders
+
+HTMLSwiftKit have three block builder:
+
+### A. HtmlBlockBuilder
+
+   All the HTML blocks will be rendered by this block. When you are creating any HTML Content, the modifiers must be wrapped by this builder block.
+
+### B. CSSModifierBuilder 
+
+   All the CSS styling blocks are rendered by this block. When adding any type of CSS styling make sure the modifiers are wrapped by this builder block.
+ 
+### C. CSSBlockBuilder
+
+   While injecting a CSS into the HTMLBlock we will use Style block. Now style block can have various types of CSS. Thus to incorporate these multiple styles we have this block builder.
+
+# License
+Copyright (c) 2024 Gokul Nair
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+
+<p align="center" width="100%">
+   Made with ❤️ in 🇮🇳 By Gokul Nair   
+</p>
