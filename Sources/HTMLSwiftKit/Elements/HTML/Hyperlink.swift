@@ -11,13 +11,17 @@ import Foundation
 /// Defines a hyperlink, which is used to link from one page to another
 public struct Hyperlink: HTMLBlock {
     
-    public var content: String
-    
-    public init(href: String, _ text: String) {
-        self.content = "<a href='\(href)'>\(text)</a>"
-    }
+    public var content: String = ""
     
     public init(page: HTMLPage, _ text: String) {
-        self.content = "<a href='\(page.name).html'>\(text)</a>"
+        self.content = "<a href='\(page.name)'>\(text)</a>"
+    }
+    
+    public init(cssClass: CSSBlock, page: HTMLPage, _ text: String) {
+        self.content = "<a class='\(cssClass.className)' href='\(page.name)'> \(text) </a>"
+    }
+    
+    public init(@CSSModifierBuilder _ style: () -> [CSSModifier], page: HTMLPage, _ text: String) {
+        self.content = "<a style='\(generateCSSInlineCode(cssModifiers: style()))' href='\(page.name)'> \(text) </a>"
     }
 }

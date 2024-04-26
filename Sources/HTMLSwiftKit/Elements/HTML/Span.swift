@@ -14,13 +14,24 @@ public struct Span: HTMLBlock {
     
     private init() { }
     
-    public init(@CSSModifierBuilder _ style: () -> [CSSModifier], text: String) {
-        self.init()
-        self.content = "<span style='\(generateCSSInlineCode(cssModifiers: style()))'>\(text)</span>"
+    
+    public init(cssClass: CSSBlock, _ text: String) {
+        self.content = "<span class='\(cssClass.className)'> \(text) </span>"
     }
     
-    public init(style: CSSModifier, text: String) {
-        self.init()
-        self.content = "<span style='\(style.content)'>\(text)</span>"
+    public init(@CSSModifierBuilder _ style: () -> [CSSModifier], _ text: String) {
+        self.content = "<span style='\(generateCSSInlineCode(cssModifiers: style()))'> \(text) </span>"
+    }
+    
+    public init(@HtmlBlockBuilder _ htmlBlock: () -> [HTMLBlock]) {
+        self.content = "<span> \(generateSubCodeBlocks(htmlBlock: htmlBlock())) </span>"
+    }
+    
+    public init(cssClass: CSSBlock, @HtmlBlockBuilder _ htmlBlock: () -> [HTMLBlock]) {
+        self.content = "<span class='\(cssClass.className)'> \(generateSubCodeBlocks(htmlBlock: htmlBlock())) </span>"
+    }
+    
+    public init(@CSSModifierBuilder _ style: () -> [CSSModifier], @HtmlBlockBuilder _ htmlBlock: () -> [HTMLBlock]) {
+        self.content = "<span style='\(generateCSSInlineCode(cssModifiers: style()))'> \(generateSubCodeBlocks(htmlBlock: htmlBlock())) </span>"
     }
 }
