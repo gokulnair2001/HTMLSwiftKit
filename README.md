@@ -182,8 +182,8 @@ Currently the kit supports the following of HTML elements:
 | Dialouge | Division | Footer | Head |
 | Heading | HorizontalRule | Hyperlink | Image |
 | Insert | ListItem | Mark | Meta |
-| NoScript | OrderedList | Paragraph | Script |
-| Span | Style | UnorderedList | |
+| NoScript | OrderedList | Paragraph | PreFormatted |
+| Script | Span | Style | UnorderedList | 
 
 All the details regarding the elements are added in their respective classes, do check them out to know more.
 Raise an issue with the details regarding the required element, and I will try to get it into the kit.
