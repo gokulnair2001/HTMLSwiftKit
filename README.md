@@ -109,7 +109,7 @@ struct StartWebsite {
 ```
 On generating Site via SPM, the kit creates a Build folder into your existing package.
 
-Check this starter project to understand more.
+Check the [starter project](https://github.com/gokulnair2001/HTMLSwiftKit-Starter-SPM-) to understand more.
 
 ### B. Using iOS Device
 
@@ -134,13 +134,13 @@ Here once the build file is generated, the console will print the Build location
 > [!Note]
 > Console will print "HTMLSwiftKit: Build is available at ```pathURL``` "
 
-Check this starter project to understand more.
+Check the [starter project](https://github.com/gokulnair2001/HTMLSwiftKit-Starter-Device-) to understand more.
 
 By following the given procedure you can build your static site easily.
 
 # Crawlers
 
-HTMLSwiftKit supports the functionality of Robots. So you can restrict certain crawlers from crawling your website. All you need to do is mention the crawlers you dont want to allpow crawling and add paths if there is any.
+HTMLSwiftKit supports the functionality of Robots. So you can restrict certain crawlers from crawling your website. All you need to do is mention the crawlers you don't want to allow crawling and add paths if there is any.
 
 ```swift
 class CrawlerConfig: CrawlerConfiguration {
