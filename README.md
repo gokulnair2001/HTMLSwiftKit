@@ -109,7 +109,7 @@ struct StartWebsite {
 ```
 On generating Site via SPM, the kit creates a Build folder into your existing package.
 
-Check this starter project to understand more.
+Check the [starter project](https://github.com/gokulnair2001/HTMLSwiftKit-Starter-SPM-) to understand more.
 
 ### B. Using iOS Device
 
