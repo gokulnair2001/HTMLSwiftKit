@@ -12,16 +12,16 @@ public struct Division: HTMLBlock {
     
     public var content: String = ""
     
-    private init() { }
     
     public init(@HtmlBlockBuilder _ htmlBlock: () -> [HTMLBlock]) {
-        self.init()
         self.content = "<div> \(generateSubCodeBlocks(htmlBlock: htmlBlock())) </div>"
     }
     
-    public init(classType: String, @HtmlBlockBuilder _ htmlBlock: () -> [HTMLBlock]) {
-        self.init()
-        let className = classType.isBlank() ? "" : " class='\(classType)'"
-        self.content = "<div\(className)> \(generateSubCodeBlocks(htmlBlock: htmlBlock())) </div>"
+    public init(cssClass: CSSBlock, @HtmlBlockBuilder _ htmlBlock: () -> [HTMLBlock]) {
+        self.content = "<div class='\(cssClass.className)'> \(generateSubCodeBlocks(htmlBlock: htmlBlock())) </div>"
+    }
+    
+    public init(@CSSModifierBuilder _ style: () -> [CSSModifier], @HtmlBlockBuilder _ htmlBlock: () -> [HTMLBlock]) {
+        self.content = "<div style='\(generateCSSInlineCode(cssModifiers: style()))'> \(generateSubCodeBlocks(htmlBlock: htmlBlock())) </div>"
     }
 }
