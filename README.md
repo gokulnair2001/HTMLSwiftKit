@@ -134,7 +134,7 @@ Here once the build file is generated, the console will print the Build location
 > [!Note]
 > Console will print "HTMLSwiftKit: Build is available at ```pathURL``` "
 
-Check this starter project to understand more.
+Check the [starter project](https://github.com/gokulnair2001/HTMLSwiftKit-Starter-Device-) to understand more.
 
 By following the given procedure you can build your static site easily.
 
