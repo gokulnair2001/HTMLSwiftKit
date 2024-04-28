@@ -17,7 +17,7 @@ public struct BorderRadius: CSSModifier {
         
         guard radius.count <= 4 && radius.count >= 1 else { return }
         
-        let borderRadius = radius.compactMap({ "\($0)" }).joined(separator: "px ")
+        let borderRadius = radius.compactMap({ "\($0)px" }).joined(separator: " ")
         
         self.content = "border-radius: \(borderRadius);"
     }
