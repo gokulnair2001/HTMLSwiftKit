@@ -140,7 +140,7 @@ By following the given procedure you can build your static site easily.
 
 # Crawlers
 
-HTMLSwiftKit supports the functionality of Robots. So you can restrict certain crawlers from crawling your website. All you need to do is mention the crawlers you dont want to allpow crawling and add paths if there is any.
+HTMLSwiftKit supports the functionality of Robots. So you can restrict certain crawlers from crawling your website. All you need to do is mention the crawlers you don't want to allow crawling and add paths if there is any.
 
 ```swift
 class CrawlerConfig: CrawlerConfiguration {
