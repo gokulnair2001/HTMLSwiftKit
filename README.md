@@ -160,12 +160,12 @@ Currently the kit supports the following of CSS modifiers:
 | Modifiers | Modifiers |
 | -- | -- |
 | BackgroundColor | Border |
-| Color | FontFamily |
-| FontSize | FontWeight |
-| Margins | Padding |
-| TextAlignment | TextDecoration |
-| TextTransform | Width |
-| Height |  |
+| BorderRadius | Color | 
+| FontFamily | FontSize |
+| FontWeight | Margins |
+| Padding | TextAlignment |
+| TextDecoration | TextTransform |
+| Width | Height |  
 
 All the details regarding the modifiers are added in their respective classes, do check them out to know more.
 Raise an issue with the details regarding the required modifier, and I will try to get it into the kit.
