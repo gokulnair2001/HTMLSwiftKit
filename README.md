@@ -3,9 +3,9 @@
 
 # HTMLSwiftKit
 
-HTMLSwiftKit is a Swift framework that simplifies the creation of static sites. The kit aims to convert your Swift written code to HTML, thus making your site generation process easy with Swift and handeling the HTML complexities under the hood. The goal of HTMLSwiftKit is to enable anyone with basic HTML knowledge to develop websites in Swift. 
+HTMLSwiftKit is a Swift framework that simplifies the creation of static sites. The kit aims to convert your Swift-written code to HTML, thus making your site generation process easy with Swift and handling the HTML complexities under the hood. The goal of HTMLSwiftKit is to enable anyone with basic HTML knowledge to develop websites in Swift.
 
-It includes all the essential HTML tags that are modified as per swift language which can be directly used. Now start generating your websites using swift.
+It includes all the essential HTML tags that are modified as per Swift language, which can be directly used. Now start generating your websites using Swift.
 
 # Getting Started
 
@@ -200,21 +200,21 @@ Currently we only have one such element:
 
 # CSS Type
 
-Primarily we have two kinds of CSS Type:
+Primarily we have two kinds of CSS types:
 
 ### A. Source
-   * Source type CSS are used when created CSS is applied on any source tag
-   * Want to create CSS for Button, Divider, Heading etc, set CSS type to Source
+   * Source type CSS is used when created CSS is applied to any source tag.
+   * Want to create CSS for Button, Divider, Heading, etc., set CSS type to Source.
      
 ### B. Custom
-   * Custom type CSS is used when created CSS is a custom class
-   * Use this when any form of custom CSS needs to be used
+   * Custom type CSS is used when created CSS is a custom class.
+   * Use this when any form of custom CSS needs to be used.
   
-   Providing a correct CSS type is important, since this will cause imapct in Source code generation
+   Providing a correct CSS type is important since this will cause impact in Source code generation.
 
 # Block Builders
 
-HTMLSwiftKit have three block builder:
+HTMLSwiftKit has three block builders:
 
 ### A. HtmlBlockBuilder
 
@@ -222,11 +222,11 @@ HTMLSwiftKit have three block builder:
 
 ### B. CSSModifierBuilder 
 
-   All the CSS styling blocks are rendered by this block. When adding any type of CSS styling make sure the modifiers are wrapped by this builder block.
+   All the CSS styling blocks are rendered by this block. When adding any type of CSS styling, make sure the modifiers are wrapped by this builder block.
  
 ### C. CSSBlockBuilder
 
-   While injecting a CSS into the HTMLBlock we will use Style block. Now style block can have various types of CSS. Thus to incorporate these multiple styles we have this block builder.
+   While injecting CSS into the HTMLBlock, we will use a Style block. Now a style block can have various types of CSS. Thus to incorporate these multiple styles, we have this block builder.
 
 # License
 Copyright (c) 2024 Gokul Nair
